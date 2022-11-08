@@ -1,0 +1,27 @@
+jaffle_shop:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: ANALYTICS
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: TRANSFORMING
+  target: dev
+dh_datastack:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: DH_DATASTACK_ANALYTICS 
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: WH_DH_DATASTACK
+  target: dev
+

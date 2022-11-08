@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dh_datastack
+    database: DH_DATASTACK_RAW
+    schema: REAL_ESTATE_ATLAS
+    tables:
+      - name: employee
+
