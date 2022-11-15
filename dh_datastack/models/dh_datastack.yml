@@ -6,4 +6,23 @@ sources:
     schema: REAL_ESTATE_ATLAS
     tables:
       - name: employee
+        columns:
+          - name : NATIONAL_INSURANCE_NBR
+            tests:
+             - unique
+             - not_null
 
+models:
+  - name: stg_employee
+    columns:
+      - name: national_insurance_nbr
+        tests:
+          - not_null
+               
+            
+snapshots:
+  - name: employee_snapshot
+    columns:
+      - name: national_insurance_nbr
+        tests:
+          - not_null
