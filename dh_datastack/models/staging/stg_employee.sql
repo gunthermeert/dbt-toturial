@@ -3,7 +3,7 @@
         materialized='incremental',
 	unique_key='national_insurance_nbr',
 	merge_update_columns = ['city'],
-    )
+	)
 }}
 
 select id

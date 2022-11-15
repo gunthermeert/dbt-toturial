@@ -1,3 +1,4 @@
+
 select 
     "Region Name" as region_name
     , "RegionType" as region_type
