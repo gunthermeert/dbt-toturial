@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select NATIONAL_INSURANCE_NBR
+from DH_DATASTACK_RAW.REAL_ESTATE_ATLAS.employee
+where NATIONAL_INSURANCE_NBR is null
+
+
