@@ -11,6 +11,14 @@ sources:
             tests:
              - unique
              - not_null
+        freshness:
+          warn_after:
+            count: 10
+            period: minute
+          error_after:
+            count: 20
+            period: minute
+        loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', update_ts)"
 
 models:
   - name: stg_employee
