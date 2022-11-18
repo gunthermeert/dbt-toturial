@@ -12184,3 +12184,445 @@ COMMIT
 [0m07:41:54.998175 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 [0m07:41:54.999117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7bf9344f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7bf9369b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7bf9b3100>]}
 [0m07:41:54.999290 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-18 09:54:24.232162 | 4e25c726-14f4-4164-a76d-d115f618b017 ==============================
+[0m09:54:24.232176 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:54:24.233223 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['employee_scd2'], 'which': 'snapshot', 'rpc_method': 'snapshot', 'indirect_selection': 'eager'}
+[0m09:54:24.233345 [debug] [MainThread]: Tracking: tracking
+[0m09:54:24.233630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cb1d2cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cb1d2c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cb1d2bf0>]}
+[0m09:54:24.283928 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:54:24.284349 [debug] [MainThread]: Partial parsing: updated file: dh_datastack://snapshots/employee_scd2.sql
+[0m09:54:24.328451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4e25c726-14f4-4164-a76d-d115f618b017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98ca5fcf70>]}
+[0m09:54:24.334772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4e25c726-14f4-4164-a76d-d115f618b017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98ca521a20>]}
+[0m09:54:24.335040 [info ] [MainThread]: Found 5 models, 4 tests, 1 snapshot, 0 analyses, 303 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m09:54:24.335752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4e25c726-14f4-4164-a76d-d115f618b017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cd661900>]}
+[0m09:54:24.336674 [info ] [MainThread]: 
+[0m09:54:24.341530 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:54:24.342188 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS"
+[0m09:54:24.352192 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS"
+[0m09:54:24.352356 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS"} */
+show terse schemas in database DH_DATASTACK_ANALYTICS
+    limit 10000
+[0m09:54:24.352426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:54:25.425568 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.07 seconds
+[0m09:54:25.428722 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS: Close
+[0m09:54:25.579818 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m09:54:25.586117 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m09:54:25.586531 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC
+[0m09:54:25.586626 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:54:26.372258 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.79 seconds
+[0m09:54:26.373538 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: Close
+[0m09:54:26.496206 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m09:54:26.498298 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m09:54:26.498458 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_snapshot"} */
+show terse objects in DH_DATASTACK_ANALYTICS.snapshot
+[0m09:54:26.498548 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:54:27.251532 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.75 seconds
+[0m09:54:27.252791 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: Close
+[0m09:54:27.368485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4e25c726-14f4-4164-a76d-d115f618b017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98c9560550>]}
+[0m09:54:27.369080 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:54:27.370165 [info ] [MainThread]: 
+[0m09:54:27.373138 [debug] [Thread-1 (]: Began running node snapshot.dh_datastack.employee_snapshot
+[0m09:54:27.373410 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.employee_snapshot ............................... [RUN]
+[0m09:54:27.374455 [debug] [Thread-1 (]: Acquiring new snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:27.374558 [debug] [Thread-1 (]: Began compiling node snapshot.dh_datastack.employee_snapshot
+[0m09:54:27.374663 [debug] [Thread-1 (]: Compiling snapshot.dh_datastack.employee_snapshot
+[0m09:54:27.378963 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:54:27.379093 [debug] [Thread-1 (]: Began executing node snapshot.dh_datastack.employee_snapshot
+[0m09:54:27.477227 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:27.477420 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:27.477503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:54:28.094439 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.62 seconds
+[0m09:54:28.117603 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:28.117801 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+create or replace temporary table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"  as
+        (with snapshot_query as (
+
+        
+
+
+
+select * from DH_DATASTACK_RAW.REAL_ESTATE_ATLAS.employee
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key
+
+        from "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+        where dbt_valid_to is null
+
+    ),
+
+    insertions_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key,
+            update_ts as dbt_updated_at,
+            update_ts as dbt_valid_from,
+            nullif(update_ts, update_ts) as dbt_valid_to,
+            md5(coalesce(cast(national_insurance_nbr||'-'||first_name as varchar ), '')
+         || '|' || coalesce(cast(update_ts as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key,
+            update_ts as dbt_updated_at,
+            update_ts as dbt_valid_from,
+            update_ts as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where snapshotted_data.dbt_unique_key is null
+           or (
+                snapshotted_data.dbt_unique_key is not null
+            and (
+                (snapshotted_data.dbt_valid_from < source_data.update_ts)
+            )
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.update_ts)
+        )
+    ),
+
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+
+        from snapshotted_data
+        left join deletes_source_data as source_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where source_data.dbt_unique_key is null
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+        );
+[0m09:54:30.145715 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.03 seconds
+[0m09:54:30.148233 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.148350 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:30.230571 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.08 seconds
+[0m09:54:30.233457 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.233591 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:30.338222 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.1 seconds
+[0m09:54:30.341982 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.342115 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:30.450583 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.11 seconds
+[0m09:54:30.453371 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.453472 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:30.550487 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.1 seconds
+[0m09:54:30.560632 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.560868 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:30.666825 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.11 seconds
+[0m09:54:30.673023 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:30.673249 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:54:30.673355 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: Close
+[0m09:54:30.817861 [error] [Thread-1 (]: [31mUnhandled error while executing snapshot.dh_datastack.employee_snapshot[0m
+[Errno 13] Permission denied: 'target/run/dh_datastack/snapshots/employee_scd2.sql'
+[0m09:54:30.819580 [debug] [Thread-1 (]: 
+[0m09:54:30.819823 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4e25c726-14f4-4164-a76d-d115f618b017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cd4f4100>]}
+[0m09:54:30.820129 [error] [Thread-1 (]: 1 of 1 ERROR snapshotting snapshot.employee_snapshot ........................... [[31mERROR[0m in 3.45s]
+[0m09:54:30.821092 [debug] [Thread-1 (]: Finished running node snapshot.dh_datastack.employee_snapshot
+[0m09:54:30.822081 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:54:30.822375 [info ] [MainThread]: 
+[0m09:54:30.822527 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 6.48 seconds (6.48s).
+[0m09:54:30.822656 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:54:30.822716 [debug] [MainThread]: Connection 'snapshot.dh_datastack.employee_snapshot' was properly closed.
+[0m09:54:30.822773 [debug] [MainThread]: Connection 'list_DH_DATASTACK_ANALYTICS_snapshot' was properly closed.
+[0m09:54:30.829283 [info ] [MainThread]: 
+[0m09:54:30.830275 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:54:30.830846 [info ] [MainThread]: 
+[0m09:54:30.831337 [error] [MainThread]: [33m[Errno 13] Permission denied: 'target/run/dh_datastack/snapshots/employee_scd2.sql'[0m
+[0m09:54:30.831880 [info ] [MainThread]: 
+[0m09:54:30.832398 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:54:30.833101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98c9d8c0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cb17ccd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98ca5fc8e0>]}
+[0m09:54:30.833295 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-18 09:54:42.237906 | 96be4bbe-9303-4412-adcd-eba1ad20218b ==============================
+[0m09:54:42.237918 [info ] [MainThread]: Running with dbt=1.3.0
+[0m09:54:42.238880 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['employee_scd2'], 'which': 'snapshot', 'rpc_method': 'snapshot', 'indirect_selection': 'eager'}
+[0m09:54:42.238993 [debug] [MainThread]: Tracking: tracking
+[0m09:54:42.239280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7c94be80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7c94be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7c94bdc0>]}
+[0m09:54:42.305061 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:54:42.305221 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:54:42.309949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '96be4bbe-9303-4412-adcd-eba1ad20218b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7bdbdea0>]}
+[0m09:54:42.315733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '96be4bbe-9303-4412-adcd-eba1ad20218b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7bd87070>]}
+[0m09:54:42.315925 [info ] [MainThread]: Found 5 models, 4 tests, 1 snapshot, 0 analyses, 303 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m09:54:42.316757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96be4bbe-9303-4412-adcd-eba1ad20218b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7bd45cc0>]}
+[0m09:54:42.318474 [info ] [MainThread]: 
+[0m09:54:42.319645 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:54:42.320239 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS"
+[0m09:54:42.329899 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS"
+[0m09:54:42.330057 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS"} */
+show terse schemas in database DH_DATASTACK_ANALYTICS
+    limit 10000
+[0m09:54:42.330122 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:54:44.440588 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.11 seconds
+[0m09:54:44.441857 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS: Close
+[0m09:54:44.555382 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m09:54:44.560932 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m09:54:44.561160 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC
+[0m09:54:44.561225 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:54:45.365908 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.8 seconds
+[0m09:54:45.367178 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: Close
+[0m09:54:45.493983 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m09:54:45.495759 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m09:54:45.495854 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_snapshot"} */
+show terse objects in DH_DATASTACK_ANALYTICS.snapshot
+[0m09:54:45.495914 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:54:46.122158 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.63 seconds
+[0m09:54:46.123297 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: Close
+[0m09:54:46.247282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96be4bbe-9303-4412-adcd-eba1ad20218b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7d2bd780>]}
+[0m09:54:46.247807 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:54:46.248348 [info ] [MainThread]: 
+[0m09:54:46.251867 [debug] [Thread-1 (]: Began running node snapshot.dh_datastack.employee_snapshot
+[0m09:54:46.252170 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.employee_snapshot ............................... [RUN]
+[0m09:54:46.253292 [debug] [Thread-1 (]: Acquiring new snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:46.253417 [debug] [Thread-1 (]: Began compiling node snapshot.dh_datastack.employee_snapshot
+[0m09:54:46.254093 [debug] [Thread-1 (]: Compiling snapshot.dh_datastack.employee_snapshot
+[0m09:54:46.256707 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:54:46.256803 [debug] [Thread-1 (]: Began executing node snapshot.dh_datastack.employee_snapshot
+[0m09:54:46.292669 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:46.292969 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:46.293069 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:54:47.123069 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.83 seconds
+[0m09:54:47.146049 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:47.146227 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+create or replace temporary table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"  as
+        (with snapshot_query as (
+
+        
+
+
+
+select * from DH_DATASTACK_RAW.REAL_ESTATE_ATLAS.employee
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key
+
+        from "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+        where dbt_valid_to is null
+
+    ),
+
+    insertions_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key,
+            update_ts as dbt_updated_at,
+            update_ts as dbt_valid_from,
+            nullif(update_ts, update_ts) as dbt_valid_to,
+            md5(coalesce(cast(national_insurance_nbr||'-'||first_name as varchar ), '')
+         || '|' || coalesce(cast(update_ts as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key,
+            update_ts as dbt_updated_at,
+            update_ts as dbt_valid_from,
+            update_ts as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select
+            *,
+            national_insurance_nbr||'-'||first_name as dbt_unique_key
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where snapshotted_data.dbt_unique_key is null
+           or (
+                snapshotted_data.dbt_unique_key is not null
+            and (
+                (snapshotted_data.dbt_valid_from < source_data.update_ts)
+            )
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.update_ts)
+        )
+    ),
+
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+
+        from snapshotted_data
+        left join deletes_source_data as source_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where source_data.dbt_unique_key is null
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+        );
+[0m09:54:48.491085 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.34 seconds
+[0m09:54:48.493991 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:48.494093 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:48.597009 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.1 seconds
+[0m09:54:48.600020 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:48.600130 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:48.751804 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.15 seconds
+[0m09:54:48.754769 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:48.754970 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:48.847743 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.09 seconds
+[0m09:54:48.850537 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:48.850680 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT"
+[0m09:54:48.919582 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.07 seconds
+[0m09:54:48.925263 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:48.925408 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+describe table "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp"
+[0m09:54:49.132714 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.21 seconds
+[0m09:54:49.139119 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:49.140307 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:49.140426 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+BEGIN
+[0m09:54:49.308004 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.17 seconds
+[0m09:54:49.308296 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:49.308366 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+merge into "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT" as DBT_INTERNAL_DEST
+    using "DH_DATASTACK_ANALYTICS"."SNAPSHOT"."EMPLOYEE_SNAPSHOT__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     and DBT_INTERNAL_DEST.dbt_valid_to is null
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("ID", "NATIONAL_INSURANCE_NBR", "FIRST_NAME", "LAST_NAME", "CITY", "UPDATE_TS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("ID", "NATIONAL_INSURANCE_NBR", "FIRST_NAME", "LAST_NAME", "CITY", "UPDATE_TS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+;
+[0m09:54:49.944402 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.64 seconds
+[0m09:54:49.944682 [debug] [Thread-1 (]: Using snowflake connection "snapshot.dh_datastack.employee_snapshot"
+[0m09:54:49.944773 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "snapshot.dh_datastack.employee_snapshot"} */
+COMMIT
+[0m09:54:50.188063 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.24 seconds
+[0m09:54:50.203719 [debug] [Thread-1 (]: finished collecting timing info
+[0m09:54:50.203883 [debug] [Thread-1 (]: On snapshot.dh_datastack.employee_snapshot: Close
+[0m09:54:50.403365 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '96be4bbe-9303-4412-adcd-eba1ad20218b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7adeb970>]}
+[0m09:54:50.403784 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshot.employee_snapshot ............................... [[32mSUCCESS 4[0m in 4.15s]
+[0m09:54:50.404768 [debug] [Thread-1 (]: Finished running node snapshot.dh_datastack.employee_snapshot
+[0m09:54:50.405671 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m09:54:50.406048 [info ] [MainThread]: 
+[0m09:54:50.406769 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 8.09 seconds (8.09s).
+[0m09:54:50.407450 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:54:50.407544 [debug] [MainThread]: Connection 'snapshot.dh_datastack.employee_snapshot' was properly closed.
+[0m09:54:50.407627 [debug] [MainThread]: Connection 'list_DH_DATASTACK_ANALYTICS_snapshot' was properly closed.
+[0m09:54:50.414372 [info ] [MainThread]: 
+[0m09:54:50.415145 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:54:50.415711 [info ] [MainThread]: 
+[0m09:54:50.416217 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:54:50.416892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7a9295a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7bd84400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7adebf10>]}
+[0m09:54:50.417058 [debug] [MainThread]: Flushing usage events

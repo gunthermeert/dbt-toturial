@@ -4,7 +4,7 @@
     config(
       target_database='DH_DATASTACK_ANALYTICS',
       target_schema='snapshot',
-      unique_key='national_insurance_nbr',
+      unique_key="national_insurance_nbr||'-'||first_name",
 
       strategy='timestamp',
       updated_at='update_ts',
