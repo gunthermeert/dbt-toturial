@@ -8,6 +8,7 @@
 
       strategy='timestamp',
       updated_at='update_ts',
+      invalidate_hard_deletes=True,
     )
 }}
 
