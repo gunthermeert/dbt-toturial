@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: dh_shop
-    database: DH_ANALYTICS_RAW
+    database: DH_DATASTACK_RAW
     schema: DH_SHOP
 
     tables:
