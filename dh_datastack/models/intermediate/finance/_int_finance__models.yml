@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_finance__daily_sales_per_product
-    description: daily sales per product
+  - name: int_finance__product_sales
+    description: sales of our products
     docs:
       show: true
