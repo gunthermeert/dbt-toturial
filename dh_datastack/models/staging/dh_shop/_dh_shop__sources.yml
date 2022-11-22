@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: DH_SHOP
+  - name: dh_shop
     database: DH_ANALYTICS_RAW
     schema: DH_SHOP
 
