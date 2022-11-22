@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: dh_shop customers
+    docs:
+      show: true
+
+    columns:
+      - name: customer_id
+        description: pk of customer
+        tests:
+          - unique
+
+  - name: stg_orderlines
+    description: dh_shop orderlines
+    docs:
+      show: true
+
+    columns:
+      - name: orderline_id
+        description: pk of orderline
+        tests:
+          - unique
+
+  - name: stg_orders
+    description: dh_shop orders
+    docs:
+      show: true
+
+    columns:
+      - name: order_id
+        description: pk of order
+        tests:
+          - unique
+
+  - name: stg_products
+    description: dh_shop customers
+    docs:
+      show: true
+
+    columns:
+      - name: product_id
+        description: pk of product
+        tests:
+          - unique

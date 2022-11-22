@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: DH_SHOP
+    database: DH_ANALYTICS_RAW
+    schema: DH_SHOP
+
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+
+      - name: orderlines
+        columns:
+          - name: orderline_id
+            tests:
+              - unique
+
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+
+      - name: products
+        columns:
+          - name: index
+            tests:
+              - unique
