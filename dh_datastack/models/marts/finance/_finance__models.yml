@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: daily_product_sales
+    description: daily sales per product
+    docs:
+      show: true
