@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_dh_stop__customers
+  - name: stg_dh_shop__customers
     description: dh_shop customers
     docs:
       show: true
