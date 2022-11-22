@@ -13,4 +13,4 @@ cte_dates as
     from cte_dates cd
     left join cte_product_sales_per_day cpspd
     on cd.date_day = cpspd.order_date
-)
+) select * from cte_final
