@@ -35,7 +35,7 @@ models:
   dh_datastack:
     +materialized: table
     staging:
-      +schema: staging
+      schema: staging
       +materialized: view
   snowflake_spend:
     enabled: false
