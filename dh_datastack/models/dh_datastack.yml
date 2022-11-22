@@ -26,7 +26,11 @@ models:
       - name: national_insurance_nbr
         tests:
           - not_null
-               
+  - name: bonus_report
+    config:
+      grants:
+        select: ['PUBLIC']
+
             
 snapshots:
   - name: employee_snapshot
