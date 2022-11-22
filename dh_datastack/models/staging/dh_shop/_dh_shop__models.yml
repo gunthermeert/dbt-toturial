@@ -1,8 +1,6 @@
 version: 2
 
 models:
-  - +target_schema: staging
-
   - name: stg_dh_stop__customers
     description: dh_shop customers
     docs:
