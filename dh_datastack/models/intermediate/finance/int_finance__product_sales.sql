@@ -1,8 +1,4 @@
 with
-cte_dates as
-(
-    select * from {{ ref('all_dates') }}
-),
 cte_customers as
 (
     select * from {{ ref('stg_dh_shop__customers') }}
