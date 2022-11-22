@@ -17,7 +17,7 @@ cte_orders as
 ),
 cte_orderlines as
 (
-    select * from {{ ref('stg_dh_shop_orderlines') }}
+    select * from {{ ref('stg_dh_shop__orderlines') }}
 )
 select *
 from cte_dates cd
