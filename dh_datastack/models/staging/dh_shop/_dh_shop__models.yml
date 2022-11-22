@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_customers
+  - name: stg_dh_stop__customers
     description: dh_shop customers
     docs:
       show: true
@@ -12,7 +12,7 @@ models:
         tests:
           - unique
 
-  - name: stg_orderlines
+  - name: stg_dh_shop__orderlines
     description: dh_shop orderlines
     docs:
       show: true
@@ -23,7 +23,7 @@ models:
         tests:
           - unique
 
-  - name: stg_orders
+  - name: stg_dh_shop__orders
     description: dh_shop orders
     docs:
       show: true
@@ -34,7 +34,7 @@ models:
         tests:
           - unique
 
-  - name: stg_products
+  - name: stg_dh_shop__products
     description: dh_shop customers
     docs:
       show: true
