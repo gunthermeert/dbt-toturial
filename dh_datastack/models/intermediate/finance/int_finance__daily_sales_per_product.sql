@@ -22,5 +22,5 @@ cte_orderlines as
 select *
 from cte_dates cd
 left join cte_orders co
-on cd.date_day = co.order_date;
+on cd.date_day = co.order_date
 
