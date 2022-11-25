@@ -43,8 +43,16 @@ models:
     marts:
       +schema: marts
       +materialized: table
+    ignore:
+      enabled: false
   snowflake_spend:
     enabled: false
+
+seeds:
+  enabled: false
+
+snapshots:
+  enabled: false
 
 
 vars:
