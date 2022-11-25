@@ -1,8 +1,5 @@
 with
-/*cte_dates as
-(
-    select * from {{ ref('all_dates') }}
-), */ cte_product_sales_per_day as
+cte_product_sales_per_day as
 (
     select order_date, product, sum(quantity) as quantity, sum(price) as revenue
     from {{ ref('int_finance__product_sales') }}
