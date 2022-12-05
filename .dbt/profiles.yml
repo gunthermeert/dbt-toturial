@@ -51,7 +51,7 @@ dh_datastack_finance:
   outputs:
     dev:
       account: nscwcjj-va13130
-      database: DH_DATASTACK_SALES
+      database: DH_DATASTACK_FINANCE
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
       schema: SALES
