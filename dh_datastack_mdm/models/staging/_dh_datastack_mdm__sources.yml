@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: dh_datastack_mdm
+    database: DH_DATASTACK_RAW
+    schema: DH_SHOP
+
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+
+      - name: products
+        columns:
+          - name: index
+            tests:
+              - unique
