@@ -1,0 +1,121 @@
+[0m08:50:06.528578 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.67 seconds
+[0m08:50:06.599990 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_staging: Close
+[0m08:50:07.017900 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m08:50:07.207436 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC"
+[0m08:50:07.223997 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC
+[0m08:50:07.241045 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:08.591503 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 1.36 seconds
+[0m08:50:08.593062 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: Close
+[0m08:50:08.836762 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m08:50:08.909329 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_snapshot"
+[0m08:50:08.909469 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_snapshot"} */
+show terse objects in DH_DATASTACK_ANALYTICS.snapshot
+[0m08:50:08.909534 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:09.853071 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.94 seconds
+[0m08:50:09.854260 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_snapshot: Close
+[0m08:50:10.030364 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"
+[0m08:50:10.045591 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"
+[0m08:50:10.045761 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_marts: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC_marts
+[0m08:50:10.045837 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:10.626733 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.58 seconds
+[0m08:50:10.627936 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_marts: Close
+[0m08:50:10.798943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '18b78173-0408-4c90-bfc4-74b3a7988413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6e843b370>]}
+[0m08:50:10.799604 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:50:10.800079 [info ] [MainThread]: 
+[0m08:50:10.858715 [debug] [Thread-1 (]: Began running node model.dh_datastack.stg_employee
+[0m08:50:10.859378 [info ] [Thread-1 (]: 1 of 1 START sql incremental model PUBLIC_staging.stg_employee ................. [RUN]
+[0m08:50:10.860097 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:10.860195 [debug] [Thread-1 (]: Began compiling node model.dh_datastack.stg_employee
+[0m08:50:10.860289 [debug] [Thread-1 (]: Compiling model.dh_datastack.stg_employee
+[0m08:50:10.864628 [debug] [Thread-1 (]: Writing injected SQL for node "model.dh_datastack.stg_employee"
+[0m08:50:10.913029 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:50:10.913266 [debug] [Thread-1 (]: Began executing node model.dh_datastack.stg_employee
+[0m08:50:11.114372 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:11.114548 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+create or replace  view DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee__dbt_tmp
+  
+   as (
+    
+
+select id
+, national_insurance_nbr
+, first_name
+, last_name
+, city
+, update_ts
+, current_timestamp as insert_ts
+from DH_DATASTACK_RAW.REAL_ESTATE_ATLAS.EMPLOYEE
+
+
+
+  -- this filter will only be applied on an incremental run
+  where update_ts > (select max(update_ts) from DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee)
+
+
+  );
+[0m08:50:11.114627 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:50:11.876446 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.76 seconds
+[0m08:50:11.922798 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:11.923002 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+describe table DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee__dbt_tmp
+[0m08:50:12.025516 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.1 seconds
+[0m08:50:12.028873 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:12.028968 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+describe table DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee
+[0m08:50:12.118872 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.09 seconds
+[0m08:50:12.125571 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:12.125706 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+describe table "DH_DATASTACK_ANALYTICS"."PUBLIC_STAGING"."STG_EMPLOYEE"
+[0m08:50:12.276319 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.15 seconds
+[0m08:50:12.315994 [debug] [Thread-1 (]: Writing runtime sql for node "model.dh_datastack.stg_employee"
+[0m08:50:12.317153 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:12.317272 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+BEGIN
+[0m08:50:12.422625 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.11 seconds
+[0m08:50:12.422975 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:12.423053 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+merge into DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee as DBT_INTERNAL_DEST
+        using DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee__dbt_tmp as DBT_INTERNAL_SOURCE
+        on 
+                DBT_INTERNAL_SOURCE.national_insurance_nbr = DBT_INTERNAL_DEST.national_insurance_nbr
+            
+
+    
+    when matched then update set
+        city = DBT_INTERNAL_SOURCE.city
+    
+
+    when not matched then insert
+        ("ID", "NATIONAL_INSURANCE_NBR", "FIRST_NAME", "LAST_NAME", "CITY", "UPDATE_TS", "INSERT_TS")
+    values
+        ("ID", "NATIONAL_INSURANCE_NBR", "FIRST_NAME", "LAST_NAME", "CITY", "UPDATE_TS", "INSERT_TS")
+
+;
+[0m08:50:13.279909 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.86 seconds
+[0m08:50:13.280184 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:13.280252 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+COMMIT
+[0m08:50:13.428038 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.15 seconds
+[0m08:50:13.479154 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.stg_employee"
+[0m08:50:13.479352 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.stg_employee"} */
+drop view if exists DH_DATASTACK_ANALYTICS.PUBLIC_staging.stg_employee__dbt_tmp cascade
+[0m08:50:13.645250 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.17 seconds
+[0m08:50:13.800364 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:50:13.800565 [debug] [Thread-1 (]: On model.dh_datastack.stg_employee: Close
+[0m08:50:13.983876 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '18b78173-0408-4c90-bfc4-74b3a7988413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6e4f19fc0>]}
+[0m08:50:13.984250 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model PUBLIC_staging.stg_employee ............ [[32mSUCCESS 0[0m in 3.12s]
+[0m08:50:13.985071 [debug] [Thread-1 (]: Finished running node model.dh_datastack.stg_employee
+[0m08:50:13.985848 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m08:50:13.986144 [info ] [MainThread]: 
+[0m08:50:13.986266 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 13.00 seconds (13.00s).
+[0m08:50:13.986368 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:50:13.986437 [debug] [MainThread]: Connection 'list_DH_DATASTACK_ANALYTICS' was properly closed.
+[0m08:50:13.986499 [debug] [MainThread]: Connection 'model.dh_datastack.stg_employee' was properly closed.
+[0m08:50:13.986597 [info ] [MainThread]: 
+[0m08:50:13.986696 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:50:13.986817 [info ] [MainThread]: 
+[0m08:50:13.986905 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m08:50:13.987052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6e4f1b0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6e43f0e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6e43f1000>]}
+[0m08:50:13.987166 [debug] [MainThread]: Flushing usage events

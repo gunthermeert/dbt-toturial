@@ -1,0 +1,167 @@
+[0m08:50:06.512876 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.65 seconds
+[0m08:50:06.598705 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC: Close
+[0m08:50:07.026647 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_staging"
+[0m08:50:07.209972 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_staging"
+[0m08:50:07.210197 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_staging: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC_staging"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC_staging
+[0m08:50:07.210270 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:08.602064 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.39 seconds
+[0m08:50:08.603274 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_staging: Close
+[0m08:50:08.894044 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"
+[0m08:50:08.897848 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"
+[0m08:50:08.897942 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_marts: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC_marts"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC_marts
+[0m08:50:08.898025 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:09.856970 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.96 seconds
+[0m08:50:09.866403 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_marts: Close
+[0m08:50:10.034754 [debug] [ThreadPool]: Acquiring new snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate"
+[0m08:50:10.037148 [debug] [ThreadPool]: Using snowflake connection "list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate"
+[0m08:50:10.037241 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "connection_name": "list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate"} */
+show terse objects in DH_DATASTACK_ANALYTICS.PUBLIC_intermediate
+[0m08:50:10.037307 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:50:10.649308 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.61 seconds
+[0m08:50:10.650445 [debug] [ThreadPool]: On list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate: Close
+[0m08:50:10.788903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b52ee3de-f263-4bf5-af90-133e2da6e803', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8cd34aa40>]}
+[0m08:50:10.789467 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:50:10.789647 [info ] [MainThread]: 
+[0m08:50:10.828557 [debug] [Thread-1 (]: Began running node model.dh_datastack.all_dates
+[0m08:50:10.829206 [info ] [Thread-1 (]: 1 of 1 START sql table model PUBLIC.all_dates .................................. [RUN]
+[0m08:50:10.829910 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.dh_datastack.all_dates"
+[0m08:50:10.830007 [debug] [Thread-1 (]: Began compiling node model.dh_datastack.all_dates
+[0m08:50:10.830103 [debug] [Thread-1 (]: Compiling model.dh_datastack.all_dates
+[0m08:50:10.835016 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.all_dates"
+[0m08:50:10.835102 [debug] [Thread-1 (]: On model.dh_datastack.all_dates: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.all_dates"} */
+select datediff(
+        day,
+        cast('2022-10-01' as date),
+        cast('2022-11-23' as date)
+        )
+[0m08:50:10.835166 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:50:11.584973 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.75 seconds
+[0m08:50:11.605253 [debug] [Thread-1 (]: Writing injected SQL for node "model.dh_datastack.all_dates"
+[0m08:50:11.606674 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:50:11.606810 [debug] [Thread-1 (]: Began executing node model.dh_datastack.all_dates
+[0m08:50:11.874088 [debug] [Thread-1 (]: Writing runtime sql for node "model.dh_datastack.all_dates"
+[0m08:50:11.908119 [debug] [Thread-1 (]: Using snowflake connection "model.dh_datastack.all_dates"
+[0m08:50:11.908302 [debug] [Thread-1 (]: On model.dh_datastack.all_dates: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "dh_datastack", "target_name": "dev", "node_id": "model.dh_datastack.all_dates"} */
+create or replace transient table DH_DATASTACK_ANALYTICS.PUBLIC.all_dates  as
+        (
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 53
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    dateadd(
+        day,
+        row_number() over (order by 1) - 1,
+        cast('2022-10-01' as date)
+        )
+
+
+    ) as date_day
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_day <= cast('2022-11-23' as date)
+
+)
+
+select * from filtered
+
+
+        );
+[0m08:50:13.301410 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.39 seconds
+[0m08:50:13.413522 [debug] [Thread-1 (]: finished collecting timing info
+[0m08:50:13.493279 [debug] [Thread-1 (]: On model.dh_datastack.all_dates: Close
+[0m08:50:13.624003 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b52ee3de-f263-4bf5-af90-133e2da6e803', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8cd34a830>]}
+[0m08:50:13.624371 [info ] [Thread-1 (]: 1 of 1 OK created sql table model PUBLIC.all_dates ............................. [[32mSUCCESS 1[0m in 2.79s]
+[0m08:50:13.625779 [debug] [Thread-1 (]: Finished running node model.dh_datastack.all_dates
+[0m08:50:13.627118 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m08:50:13.627423 [info ] [MainThread]: 
+[0m08:50:13.627545 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 12.53 seconds (12.53s).
+[0m08:50:13.627646 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:50:13.627700 [debug] [MainThread]: Connection 'model.dh_datastack.all_dates' was properly closed.
+[0m08:50:13.627772 [debug] [MainThread]: Connection 'list_DH_DATASTACK_ANALYTICS_PUBLIC_intermediate' was properly closed.
+[0m08:50:13.627890 [info ] [MainThread]: 
+[0m08:50:13.627994 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:50:13.628114 [info ] [MainThread]: 
+[0m08:50:13.628203 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m08:50:13.628355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8c91295d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8ca5ff130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8c91094b0>]}
+[0m08:50:13.628476 [debug] [MainThread]: Flushing usage events

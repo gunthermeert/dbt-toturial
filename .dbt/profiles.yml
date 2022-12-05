@@ -1,21 +1,8 @@
-jaffle_shop:
-  outputs:
-    dev:
-      account: nscwcjj-va13130
-      database: ANALYTICS
-      password: 5$AMSDMtx3ogspf@
-      role: accountadmin
-      schema: PUBLIC
-      threads: 1
-      type: snowflake
-      user: gunther
-      warehouse: TRANSFORMING
-  target: dev
 dh_datastack:
   outputs:
     dev:
       account: nscwcjj-va13130
-      database: DH_DATASTACK_ANALYTICS 
+      database: DH_DATASTACK_ANALYTICS
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
       schema: PUBLIC
@@ -34,4 +21,55 @@ dh_datastack:
       user: gunther
       warehouse: WH_DH_DATASTACK
   target: dev
-
+dh_datastack_marketing:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: DH_DATASTACK_MARKETING
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: MARKETING
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: WH_DH_DATASTACK
+  target: dev
+dh_datastack_mdm:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: DH_DATASTACK_MDM
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: MDM
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: WH_DH_DATASTACK
+  target: dev
+dh_datastack_sales:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: DH_DATASTACK_SALES
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: SALES
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: WH_DH_DATASTACK
+  target: dev
+jaffle_shop:
+  outputs:
+    dev:
+      account: nscwcjj-va13130
+      database: ANALYTICS
+      password: 5$AMSDMtx3ogspf@
+      role: accountadmin
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: gunther
+      warehouse: TRANSFORMING
+  target: dev
