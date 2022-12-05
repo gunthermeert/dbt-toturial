@@ -47,7 +47,7 @@ dh_datastack_mdm:
       user: gunther
       warehouse: WH_DH_DATASTACK
   target: dev
-dh_datastack_sales:
+dh_datastack_finance:
   outputs:
     dev:
       account: nscwcjj-va13130
