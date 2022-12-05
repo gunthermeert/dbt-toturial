@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('dh_datastack_sales_dh_shop','orderlines') }}
+    select * from {{ source('dh_datastack_finance_dh_shop','orderlines') }}
 ),
 orderlines as (
     select

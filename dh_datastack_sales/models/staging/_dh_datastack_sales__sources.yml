@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: dh_datastack_sales_dh_shop
+  - name: dh_datastack_finance_dh_shop
     database: DH_DATASTACK_RAW
     schema: DH_SHOP
 
@@ -18,7 +18,7 @@ sources:
             tests:
               - unique
 
-  - name: dh_datastack_sales_mdm
+  - name: dh_datastack_finance_mdm
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
 
