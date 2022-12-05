@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: dh_datastack_marketing
+    database: DH_DATASTACK_RAW
+    schema: ACTIVE_CAMPAIGN
+
+    tables:
+      - name: campaigns
+        columns:
+          - name: campaign_id
+            tests:
+              - unique
