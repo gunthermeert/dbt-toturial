@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('dh_datastack_sales_mdm','customers') }}
+    select * from {{ source('dh_datastack_sales_mdm','STG_DH_DATASTACK_MDM__CUSTOMERS') }}
 ),
 customers as (
     select
