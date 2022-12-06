@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('dh_datastack_finance_dh_shop','orders') }}
+    select * from {{ source('dh_shop','orders') }}
 ),
 orders as (
     select

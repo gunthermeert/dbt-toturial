@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_dh_shop__orderlines
+    description: dh_shop orderlines
+    docs:
+      show: true
+
+    columns:
+      - name: orderline_id
+        description: pk of orderline
+        tests:
+          - unique
+
+  - name: stg_dh_shop__orders
+    description: dh_shop orders
+    docs:
+      show: true
+
+    columns:
+      - name: order_id
+        description: pk of order
+        tests:
+          - unique

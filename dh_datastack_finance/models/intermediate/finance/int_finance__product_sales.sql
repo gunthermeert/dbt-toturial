@@ -1,11 +1,11 @@
 with
 cte_customers as
 (
-    select * from {{ ref('stg_dh_shop__customers') }}
+    select * from {{ ref('stg_dh_datastack_mdm__customers') }}
 ),
 cte_products as
 (
-    select * from {{ ref('stg_dh_shop__products') }}
+    select * from {{ ref('stg_dh_datastack_mdm__products') }}
 ),
 cte_orders as
 (

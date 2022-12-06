@@ -1,24 +1,7 @@
 version: 2
 
 sources:
-  - name: dh_shop
-    database: DH_DATASTACK_RAW
-    schema: DH_SHOP
-
-    tables:
-      - name: orderlines
-        columns:
-          - name: orderline_id
-            tests:
-              - unique
-
-      - name: orders
-        columns:
-          - name: order_id
-            tests:
-              - unique
-
-  - name: dh_datastack_finance_mdm
+  - name: dh_datastack_mdm
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
 
