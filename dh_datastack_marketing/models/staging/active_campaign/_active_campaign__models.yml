@@ -11,4 +11,3 @@ models:
         description: pk of campaigns
         tests:
           - unique
-          - not_null
