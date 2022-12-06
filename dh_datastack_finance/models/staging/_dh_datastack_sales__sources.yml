@@ -35,7 +35,7 @@ sources:
           error_after:
             count: 10
             period: minute
-        loaded_at_field: "convert_timezone('UTC', 'America/Los_Angeles', loaded_at)"
+        loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
 
       - name: STG_DH_DATASTACK_MDM__CUSTOMERS
@@ -50,4 +50,4 @@ sources:
           error_after:
             count: 10
             period: minute
-        loaded_at_field: "convert_timezone('UTC', 'America/Los_Angeles', loaded_at)"
+        loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
