@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('dh_datastack_mdm','products') }}
+    select * from {{ source('sh_shop','products') }}
 ),
 products as (
     select
