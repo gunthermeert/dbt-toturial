@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_dh_datastack_marketing__campaigns
+  - name: stg_active_campaign__campaigns
     description: campaigns coming in from active campaigns application
     docs:
       show: true

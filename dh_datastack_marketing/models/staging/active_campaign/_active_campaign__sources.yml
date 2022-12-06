@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: dh_datastack_marketing
+  - name: active_campaign
     database: DH_DATASTACK_RAW
     schema: ACTIVE_CAMPAIGN
 

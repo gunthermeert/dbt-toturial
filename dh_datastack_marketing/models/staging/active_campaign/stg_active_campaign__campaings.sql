@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('dh_datastack_marketing','campaigns') }}
+    select * from {{ source('active_campaign','campaigns') }}
 ),
 campaigns as (
     select
