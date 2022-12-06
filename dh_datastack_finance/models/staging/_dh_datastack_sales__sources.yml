@@ -30,11 +30,12 @@ sources:
               - unique
         freshness:
           warn_after:
-            count:
-            perdiod:
+            count: 5
+            period: minute
           error_after:
-            count:
-            period:
+            count: 10
+            period: minute
+        loaded_at_field: "convert_timezone('UTC', 'America/Los_Angeles', loaded_at"
 
 
       - name: STG_DH_DATASTACK_MDM__CUSTOMERS
