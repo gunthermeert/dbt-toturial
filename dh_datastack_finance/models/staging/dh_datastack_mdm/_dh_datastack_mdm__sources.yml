@@ -6,7 +6,7 @@ sources:
     schema: MDM_STAGING
 
     tables:
-      - name: STG_DH_DATASTACK_MDM__PRODUCTS
+      - name: STG_DH_SHOP__PRODUCTS
         columns:
           - name: product_id
             tests:
@@ -21,7 +21,7 @@ sources:
         loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
 
-      - name: STG_DH_DATASTACK_MDM__CUSTOMERS
+      - name: STG_DH_SHOP__CUSTOMERS
         columns:
           - name: customer_id
             tests:
