@@ -43,3 +43,11 @@ sources:
           - name: customer_id
             tests:
               - unique
+        freshness:
+          warn_after:
+            count: 5
+            period: minute
+          error_after:
+            count: 10
+            period: minute
+        loaded_at_field: "convert_timezone('UTC', 'America/Los_Angeles', loaded_at)"
