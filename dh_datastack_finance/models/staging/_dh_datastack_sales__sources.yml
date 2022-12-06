@@ -28,6 +28,14 @@ sources:
           - name: product_id
             tests:
               - unique
+        freshness:
+          warn_after:
+            count:
+            perdiod:
+          error_after:
+            count:
+            period:
+
 
       - name: STG_DH_DATASTACK_MDM__CUSTOMERS
         columns:

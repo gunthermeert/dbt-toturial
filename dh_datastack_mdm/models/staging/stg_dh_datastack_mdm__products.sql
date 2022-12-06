@@ -12,7 +12,8 @@ products as (
     market_price,
     type as product_type,
     rating,
-    description
+    description,
+    current_timestamp() as loaded_at
     from source
 )
 select * from products

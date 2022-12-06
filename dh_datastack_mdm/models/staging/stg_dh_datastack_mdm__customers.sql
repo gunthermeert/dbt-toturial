@@ -13,7 +13,8 @@ customers as (
         postal,
         phone1 as first_phone,
         phone2 as second_phone,
-        email
+        email,
+        current_timestamp() as loaded_at
     from source
 )
 select * from customers
