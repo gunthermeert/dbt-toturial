@@ -35,4 +35,4 @@ models:
   dh_datastack_mdm:
     staging:
       +schema: staging
-      +materialized: view
+      +materialized: table
