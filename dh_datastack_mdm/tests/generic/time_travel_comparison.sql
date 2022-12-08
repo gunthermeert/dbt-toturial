@@ -21,7 +21,7 @@ with time_travel as (
         {%- else -%}
         tt.{{ col }} <> cd.{{ col }}
         {%- endif -%}
-        {%- if not loop.last -%} or {%- endif %}
+        {%- if not loop.last %} or {% endif %}
     {%- endfor %}
 
 
