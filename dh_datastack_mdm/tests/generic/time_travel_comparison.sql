@@ -14,7 +14,7 @@ with time_travel as (
     from time_travel tt
     inner join current_data cd
     on tt.{{ unique_key }} = cd.{{ unique_key }}
-    where tt.first_name <> cd.first_name
+    where
         {% for col in check_cols -%}
         {% if quote -%}
         tt.'{{ col }}' <> cd.'{{ col }}'
