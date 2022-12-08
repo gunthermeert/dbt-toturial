@@ -1,4 +1,4 @@
-{% test time_travel_comparison(model, column_name, unique_key, expression) %}
+{% test time_travel_comparison(model, column_name, unique_key, check_cols, expression, quote=True) %}
 
 with time_travel as (
     select *
@@ -15,6 +15,16 @@ with time_travel as (
     inner join current_data cd
     on tt.{{ unique_key }} = cd.{{ unique_key }}
     where tt.first_name <> cd.first_name
+        {% for col in check_cols -%}
+        {% if quote -%}
+        tt.'{{ col }}' <> cd.'{{ col }}'
+        {%- else -%}
+        tt.{{ col }} <> cd.{{ col }}
+        {%- endif -%}
+        {%- if not loop.last -%} or {%- endif %}
+    {%- endfor %}
+
+
 )
 select
     *
