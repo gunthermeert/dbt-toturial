@@ -1,4 +1,4 @@
-{% test time_travel_comparison(model, column_name, unique_key, check_cols, expression, quote=True) %}
+{% test time_travel_comparison(model, column_name, unique_key, check_cols, expression, quote=False) %}
 
 with time_travel as (
     select *
