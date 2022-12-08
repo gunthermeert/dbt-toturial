@@ -9,7 +9,7 @@ sources:
       - name: customers
         tests:
           - time_travel_comparison:
-              unique_key: customer_id
+              unique_key: 'customer_id'
         columns:
           - name: customer_id
             tests:
