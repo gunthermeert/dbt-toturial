@@ -13,7 +13,7 @@ with time_travel as (
     select *
     from time_travel tt
     inner join current_data cd
-    on tt.{{ unique_key }} = cd.unique_key
+    on tt.{{ unique_key }} = cd.{{ unique_key }}
     where tt.first_name <> cd.first_name
 )
 select
