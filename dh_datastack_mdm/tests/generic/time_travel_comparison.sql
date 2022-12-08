@@ -1,4 +1,4 @@
-{% test time_travel_comparison(model, column_name, expression) %}
+{% test time_travel_comparison(model, column_name, unique_key, expression) %}
 
 with time_travel as (
     select *
@@ -13,18 +13,12 @@ with time_travel as (
     select *
     from time_travel tt
     inner join current_data cd
-    on tt.customer_id = cd.customer_id
+    on tt.{{ unique_key }} = cd.unique_key
     where tt.first_name <> cd.first_name
 )
 select
     *
 from meet_condition
-{% if column_name is none %}
-where not({{ expression }})
-{%- else %}
-where not({{ column_name }} {{ expression }})
-{%- endif %}
-
 {% endtest %}
 
 
