@@ -7,6 +7,8 @@ sources:
 
     tables:
       - name: customers
+        tests:
+          - time_travel_comparison
         columns:
           - name: customer_id
             tests:
