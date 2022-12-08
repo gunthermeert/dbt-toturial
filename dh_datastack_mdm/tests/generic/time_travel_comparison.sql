@@ -3,7 +3,7 @@
 with time_travel as (
     select *
     from {{ model }}
-    at(timestamp => dateadd({{ model }}, -{{ count }}, current_timestamp()))
+    at(timestamp => dateadd({{ period }}, -{{ count }}, current_timestamp()))
     where customer_id = 1
 ), current_data as (
     select *
