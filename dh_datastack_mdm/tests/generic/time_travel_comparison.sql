@@ -1,9 +1,9 @@
-{% test time_travel_comparison(model, column_name, unique_key, check_cols, expression, quote=False) %}
+{% test time_travel_comparison(model, column_name, unique_key, check_cols, count, period, expression, quote=False) %}
 
 with time_travel as (
     select *
     from {{ model }}
-    at(timestamp => dateadd(minute, -2, current_timestamp()))
+    at(timestamp => dateadd({{ model }}, -{{ count }}, current_timestamp()))
     where customer_id = 1
 ), current_data as (
     select *
