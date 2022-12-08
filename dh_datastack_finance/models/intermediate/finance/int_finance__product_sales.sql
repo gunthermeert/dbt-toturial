@@ -14,7 +14,7 @@ cte_orders as
 cte_orderlines as
 (
     select * from {{ ref('stg_dh_shop__orderlines') }}
-)
+),
 cte_campaigns as
 (
     select * from {{ ref('stg_dh_datastack_marketing__campaigns') }}
