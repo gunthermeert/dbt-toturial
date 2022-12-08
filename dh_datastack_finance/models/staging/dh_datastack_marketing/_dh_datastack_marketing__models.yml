@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_dh_datastack_marketing__campaigns
+    description: campaigns
+    docs:
+      show: true
+
+    columns:
+      - name: campaign_id
+        description: pk of campaigns
+        tests:
+          - unique
+

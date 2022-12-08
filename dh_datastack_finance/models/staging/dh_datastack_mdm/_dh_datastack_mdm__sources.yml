@@ -14,13 +14,15 @@ sources:
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
-      - name: STG_DH_SHOP__PRODUCTS
+      - name: PRODUCTS
+        identifier: STG_DH_SHOP__PRODUCTS
         columns:
           - name: product_id
             tests:
               - unique
 
-      - name: STG_DH_SHOP__CUSTOMERS
+      - name: CUSTOMERS
+        identifier: STG_DH_SHOP__CUSTOMERS
         columns:
           - name: customer_id
             tests:

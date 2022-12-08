@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: dh_datastack_marketing
+    database: DH_DATASTACK_MARKETING
+    schema: MARKETING_STAGING
+
+    tables:
+      - name: CAMPAIGNS
+        identifier: STG_ACTIVE_CAMPAIGN__CAMPAIGNS
+        columns:
+          - name: campaign_id
+            tests:
+              - unique
