@@ -4,6 +4,14 @@ sources:
   - name: dh_datastack_mdm
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
+    freshness:
+      warn_after:
+        count: 5
+        period: minute
+      error_after:
+        count: 10
+        period: minute
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
       - name: STG_DH_SHOP__PRODUCTS
@@ -11,26 +19,9 @@ sources:
           - name: product_id
             tests:
               - unique
-        freshness:
-          warn_after:
-            count: 5
-            period: minute
-          error_after:
-            count: 10
-            period: minute
-        loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
-
 
       - name: STG_DH_SHOP__CUSTOMERS
         columns:
           - name: customer_id
             tests:
               - unique
-        freshness:
-          warn_after:
-            count: 5
-            period: minute
-          error_after:
-            count: 10
-            period: minute
-        loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
