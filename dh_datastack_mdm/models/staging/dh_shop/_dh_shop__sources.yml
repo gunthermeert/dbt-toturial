@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: sh_shop
+  - name: dh_shop
     database: DH_DATASTACK_RAW
     schema: DH_SHOP
 

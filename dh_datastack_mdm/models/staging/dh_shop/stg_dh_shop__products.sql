@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('sh_shop','products') }}
+    select * from {{ source('dh_shop','products') }}
 ),
 products as (
     select
