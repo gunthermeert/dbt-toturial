@@ -1,4 +1,4 @@
-{% test time_travel_equal_nbr_of_records(model, column_name, count, period, expression, quote=False, condition) %}
+{% test time_travel_equal_nbr_of_records(model, column_name, count, period, expression, condition, quote=False) %}
 
 with time_travel as (
     select count(*) nbr_records_time_travel
