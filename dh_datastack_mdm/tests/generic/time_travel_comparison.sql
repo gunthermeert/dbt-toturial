@@ -4,13 +4,11 @@ with time_travel as (
     select *
     from {{ model }}
     at(timestamp => dateadd({{ period }}, -{{ count }}, current_timestamp()))
-    where customer_id = 1
 ), current_data as (
     select *
     from {{ model }}
-    where customer_id = 1
-), meet_condition as (
-    select *
+), changes as (
+    select tt.{{ unique_key }}, 'updated' as action_ind
     from time_travel tt
     inner join current_data cd
     on tt.{{ unique_key }} = cd.{{ unique_key }}
@@ -23,12 +21,18 @@ with time_travel as (
         {%- endif -%}
         {%- if not loop.last %} or {% endif %}
     {%- endfor %}
-
-
+), deletes as (
+    select tt.{{ unique_key }}, 'deleted' as action_ind
+    from time_travel tt
+    left join current_data cd
+    on tt.{{ unique_key }} = cd.{{ unique_key }}
+    where cd.{{ unique_key }} is null
 )
-select
-    *
-from meet_condition
+select *
+from changes
+union all
+select *
+from deletes
 {% endtest %}
 
 
