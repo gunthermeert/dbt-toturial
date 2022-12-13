@@ -48,6 +48,8 @@ dh_datastack_mdm:
       warehouse: WH_DH_DATASTACK
   target: dev
 dh_datastack_finance:
+  config:
+    partial_parse: true
   outputs:
     dev:
       account: nscwcjj-va13130
