@@ -12,7 +12,7 @@ sources:
               unique_key: 'customer_id'
               check_cols: ['first_name', 'last_name']
               count: 1
-              period: day
+              period: minute
         columns:
           - name: customer_id
             tests:
