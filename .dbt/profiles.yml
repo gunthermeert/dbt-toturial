@@ -1,7 +1,7 @@
 dh_datastack:
   outputs:
     dev:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: DH_DATASTACK_ANALYTICS
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
@@ -11,7 +11,7 @@ dh_datastack:
       user: gunther
       warehouse: WH_DH_DATASTACK
     prod:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: DH_DATASTACK_ANALYTICS
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
@@ -24,7 +24,7 @@ dh_datastack:
 dh_datastack_marketing:
   outputs:
     dev:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: DH_DATASTACK_MARKETING
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
@@ -37,7 +37,7 @@ dh_datastack_marketing:
 dh_datastack_mdm:
   outputs:
     dev:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: DH_DATASTACK_MDM
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
@@ -52,7 +52,7 @@ dh_datastack_finance:
     partial_parse: true
   outputs:
     dev:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: DH_DATASTACK_FINANCE
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
@@ -65,7 +65,7 @@ dh_datastack_finance:
 jaffle_shop:
   outputs:
     dev:
-      account: nscwcjj-va13130
+      account: zgjsxfx-sf91689
       database: ANALYTICS
       password: 5$AMSDMtx3ogspf@
       role: accountadmin
