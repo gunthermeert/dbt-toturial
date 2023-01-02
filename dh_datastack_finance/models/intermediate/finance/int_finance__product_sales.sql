@@ -15,10 +15,10 @@ cte_orderlines as
 (
     select * from {{ ref('stg_dh_shop__orderlines') }}
 ),
-cte_campaigns as
+/*cte_campaigns as
 (
     select * from {{ ref('stg_dh_datastack_marketing__campaigns') }}
-)
+)*/
 , cte_final as (
     select col.orderline_id, co.order_id, cp.product_id, cc.customer_id, co.order_date, cp.product, col.amount_sold as quantity, cp.market_price as price
     from cte_orderlines col

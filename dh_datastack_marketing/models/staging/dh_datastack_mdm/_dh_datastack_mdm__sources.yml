@@ -6,11 +6,11 @@ sources:
     schema: MDM_STAGING
     freshness:
       warn_after:
-        count: 5
-        period: minute
-      error_after:
         count: 10
-        period: minute
+        period: hours
+      error_after:
+        count: 12
+        period: hours
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
