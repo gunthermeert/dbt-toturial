@@ -12,7 +12,7 @@ cte_products as
 ),
 cte_campaigns as
 (
-    select * from {{ ref('stg_dh_datastack_marketing__campaigns') }}
+    select * from {{ ref('stg_active_campaign__campaigns') }}
 )
 , cte_final as (
     select *
