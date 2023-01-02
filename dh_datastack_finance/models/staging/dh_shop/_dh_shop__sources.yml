@@ -16,7 +16,7 @@ sources:
         tests:
           - time_travel_equal_nbr_of_records:
               count: 1
-              period: hour
+              period: minute
               where_clause: "order_date between '2022-10-01' and '2022-12-31'"
         columns:
           - name: order_id
