@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: marketing_campaigns
+    description: campaign validation
+    docs:
+      show: true

@@ -6,7 +6,7 @@ cte_product_sales_per_day as
     group by order_date, product
 ), cte_final as
 (
-    select /*date_day as */order_date, product, quantity, revenue
+    select /*date_day as */order_date, product, quantity, revenue, current_timestamp() as loaded_at
     /*from cte_dates cd
     left join cte_product_sales_per_day cpspd
     on cd.date_day = cpspd.order_date*/

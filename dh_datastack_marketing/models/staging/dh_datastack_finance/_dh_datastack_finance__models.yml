@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_dh_datastack_finance__daily_product_sales
+    description: finance daily product sales
+    docs:
+      show: true

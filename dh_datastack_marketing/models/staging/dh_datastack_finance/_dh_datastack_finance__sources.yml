@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: dh_datastack_finance
+    database: DH_DATASTACK_FINANCE
+    schema: SALES_MARTS
+    freshness:
+      warn_after:
+        count: 5
+        period: minute
+      error_after:
+        count: 10
+        period: minute
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: DAILY_PRODUCT_SALES
