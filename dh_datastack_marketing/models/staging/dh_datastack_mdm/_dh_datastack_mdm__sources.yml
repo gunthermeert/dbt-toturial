@@ -7,10 +7,10 @@ sources:
     freshness:
       warn_after:
         count: 10
-        period: hours
+        period: minute
       error_after:
         count: 12
-        period: hours
+        period: minute
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
