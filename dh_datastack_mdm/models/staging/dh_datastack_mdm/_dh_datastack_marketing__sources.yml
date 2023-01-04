@@ -1,0 +1,56 @@
+version: 2
+
+sources:
+  - name: mdm_marketing_freshness
+    database: DH_DATASTACK_MDM
+    schema: MDM_STAGING
+    freshness:
+      warn_after:
+        count: 8
+        period: minute
+      error_after:
+        count: 10
+        period: minute
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: PRODUCTS
+        identifier: STG_DH_SHOP__PRODUCTS
+        columns:
+          - name: product_id
+            tests:
+              - unique
+
+      - name: CUSTOMERS
+        identifier: STG_DH_SHOP__CUSTOMERS
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+
+  - name: mdm_finance_freshness
+    database: DH_DATASTACK_MDM
+    schema: MDM_STAGING
+    freshness:
+      warn_after:
+        count: 2
+        period: minute
+      error_after:
+        count: 5
+        period: minute
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: PRODUCTS
+        identifier: STG_DH_SHOP__PRODUCTS
+        columns:
+          - name: product_id
+            tests:
+              - unique
+
+      - name: CUSTOMERS
+        identifier: STG_DH_SHOP__CUSTOMERS
+        columns:
+          - name: customer_id
+            tests:
+              - unique
