@@ -1,15 +1,15 @@
 version: 2
 
 sources:
-  - name: mdm_marketing_freshness
+  - name: mdm_freshness_1_hour
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
     freshness:
       warn_after:
-        count: 8
+        count: 50
         period: minute
       error_after:
-        count: 10
+        count: 60
         period: minute
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
@@ -28,16 +28,43 @@ sources:
             tests:
               - unique
 
-  - name: mdm_finance_freshness
+  - name: mdm_freshness_4_hour
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
     freshness:
       warn_after:
-        count: 2
-        period: minute
+        count: 3
+        period: hour
       error_after:
+        count: 4
+        period: hour
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: PRODUCTS
+        identifier: STG_DH_SHOP__PRODUCTS
+        columns:
+          - name: product_id
+            tests:
+              - unique
+
+      - name: CUSTOMERS
+        identifier: STG_DH_SHOP__CUSTOMERS
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+
+  - name: mdm_freshness_6_hour
+    database: DH_DATASTACK_MDM
+    schema: MDM_STAGING
+    freshness:
+      warn_after:
         count: 5
-        period: minute
+        period: hour
+      error_after:
+        count: 6
+        period: hour
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
