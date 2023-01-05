@@ -6,10 +6,10 @@ sources:
     schema: SALES_MARTS
     freshness:
       warn_after:
-        count: 5
+        count: 50
         period: minute
       error_after:
-        count: 10
+        count: 60
         period: minute
     loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
