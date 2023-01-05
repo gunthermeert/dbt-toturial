@@ -4,14 +4,6 @@ sources:
   - name: dh_datastack_mdm
     database: DH_DATASTACK_MDM
     schema: MDM_STAGING
-    freshness:
-      warn_after:
-        count: 50
-        period: minute
-      error_after:
-        count: 60
-        period: minute
-    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
 
     tables:
       - name: PRODUCTS
