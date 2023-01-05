@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: finance_freshness_1_hour
+    database: DH_DATASTACK_FINANCE
+    schema: SALES_MARTS
+    freshness:
+      warn_after:
+        count: 50
+        period: minute
+      error_after:
+        count: 60
+        period: minute
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: DAILY_PRODUCT_SALES
+
+  - name: finance_freshness_4_hour
+    database: DH_DATASTACK_FINANCE
+    schema: SALES_MARTS
+    freshness:
+      warn_after:
+        count: 3
+        period: hour
+      error_after:
+        count: 4
+        period: hour
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: DAILY_PRODUCT_SALES
+
+  - name: finance_freshness_6_hour
+    database: DH_DATASTACK_FINANCE
+    schema: SALES_MARTS
+    freshness:
+      warn_after:
+        count: 5
+        period: hour
+      error_after:
+        count: 6
+        period: hour
+    loaded_at_field: "convert_timezone('America/Los_Angeles', 'UTC', loaded_at)"
+
+    tables:
+      - name: DAILY_PRODUCT_SALES
