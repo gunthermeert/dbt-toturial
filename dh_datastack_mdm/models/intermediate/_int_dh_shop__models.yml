@@ -14,5 +14,5 @@ models:
       - name: sale_price
         tests:
          - value_higher_then:
-             number_value: 2
+             number_value: 50
 
