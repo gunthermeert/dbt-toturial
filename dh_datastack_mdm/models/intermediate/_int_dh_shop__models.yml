@@ -11,7 +11,7 @@ models:
         description: pk of product
         tests:
           - unique
-      - name:
+      - name: sale_price
         tests:
          - value_higher_then:
              number_value: 2
