@@ -6,7 +6,7 @@ models:
       - time_travel_record_count_threshold:
           period: 'minutes'
           period_value: 10
-          threshold_value: 5
+          threshold_value: 1
 
     description: dh_shop customers
     docs:
