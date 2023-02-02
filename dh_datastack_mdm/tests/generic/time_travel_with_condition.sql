@@ -36,11 +36,11 @@ select ctt.*
 ), cte_final as (
 select *
     from cte_updates
-    ({{ condition }}
+    {{ condition }}
 union all
-select * as cnt
+select *
     from cte_deletes
-    ({{ condition }}
+    {{ condition }}
 )
 select *
 from cte_final
