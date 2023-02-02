@@ -1,8 +1,8 @@
+{% test time_travel_with_condition(model, date_part, time_travel_interval, unique_key, compare_columns, condition) %}
 {{ config(
   enabled=false
 ) }}
 
-{% test time_travel_with_condition(model, date_part, time_travel_interval, unique_key, compare_columns, condition) %}
 -- time travel comparison that checks if all values in column x are the same as before the load
 -- test must also include checking for deleted records
 -- e.g. test will fail if within timetravel record id=1 column_x = x and after load, record id=1 column_x = y -> column_x was updated
