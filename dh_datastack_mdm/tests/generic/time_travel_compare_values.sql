@@ -17,21 +17,21 @@ at(timestamp => dateadd({{ date_part }}, -{{ time_travel_interval }}, current_ti
 select *, 'current' as source
 from {{ model }}
 ), cte_updates as (
-select ctt.customer_id
+select ctt.{{ unique_key }}
     from cte_time_travel ctt
     inner join cte_current_data ccd
-    on ctt.{{ unique_key }} = ccd.{{ unique_key }}
-    where coalesce(ctt.first_name, 'NULL') <> coalesce(ccd.first_name, 'NULL')
-), cte_deletes as (
-select ctt.customer_id
-    from cte_time_travel ctt
-    left join cte_current_data ccd
     on ctt.{{ unique_key }} = ccd.{{ unique_key }}
     {% for column in compare_columns -%}
     {%- if loop.first -%} where ctt."{{ column }}" <> ccd."{{ column }}"
     {%- else -%} or ctt."{{ column }}" <> ccd."{{ column }}"
     {%- endif %}
     {%- endfor %}
+), cte_deletes as (
+select ctt.{{ unique_key }}
+    from cte_time_travel ctt
+    left join cte_current_data ccd
+    on ctt.{{ unique_key }} = ccd.{{ unique_key }}
+    where ccd.{{ unique_key }} is null
 ), cte_final as (
 select count(*) as cnt
     from cte_updates

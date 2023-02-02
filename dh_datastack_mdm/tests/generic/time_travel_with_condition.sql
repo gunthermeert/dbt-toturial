@@ -22,25 +22,25 @@ select ctt.*
     from cte_time_travel ctt
     inner join cte_current_data ccd
     on ctt.{{ unique_key }} = ccd.{{ unique_key }}
-    where coalesce(ctt.first_name, 'NULL') <> coalesce(ccd.first_name, 'NULL')
-), cte_deletes as (
-select ctt.*
-    from cte_time_travel ctt
-    left join cte_current_data ccd
-    on ctt.{{ unique_key }} = ccd.{{ unique_key }}
     {% for column in compare_columns -%}
     {%- if loop.first -%} where ctt."{{ column }}" <> ccd."{{ column }}"
     {%- else -%} or ctt."{{ column }}" <> ccd."{{ column }}"
     {%- endif %}
     {%- endfor %}
+), cte_deletes as (
+select ctt.*
+    from cte_time_travel ctt
+    left join cte_current_data ccd
+    on ctt.{{ unique_key }} = ccd.{{ unique_key }}
+    where ccd.{{ unique_key }} is null
 ), cte_final as (
 select *
     from cte_updates
-    and ({{ condition }}
+    ({{ condition }}
 union all
 select * as cnt
     from cte_deletes
-    and ({{ condition }}
+    ({{ condition }}
 )
 select *
 from cte_final
