@@ -1,8 +1,6 @@
-{{
-  config(
-    enabled=false
-  )
-}}
+{{ config(
+  enabled=false
+) }}
 
 {% test time_travel_with_condition(model, date_part, time_travel_interval, unique_key, compare_columns, condition) %}
 -- time travel comparison that checks if all values in column x are the same as before the load
