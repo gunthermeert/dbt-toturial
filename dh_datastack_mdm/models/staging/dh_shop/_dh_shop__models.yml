@@ -17,7 +17,7 @@ models:
           time_travel_interval: 5
           unique_key: 'customer_id'
           compare_columns: [ 'FIRST_NAME', 'LAST_NAME' ]
-          condition: 'where EMAIL = ''Gunther'''
+          condition: 'where EMAIL = ''Guntherr'''
 
     description: dh_shop customers
     docs:
