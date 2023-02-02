@@ -1,16 +1,16 @@
-{% test time_travel_record_count_threshold(model, period, period_value, threshold_value) %}
+{% test time_travel_record_count_threshold(model, date_part, time_travel_interval, threshold_value) %}
 -- time travel comparison that checks if the new data has grown or decreased within the treshold limit
 -- e.g. when count(*) of time travel state = 100 and threshold = 10%, the count(*) of the current data must be between 90 and 110.
 /*
 parameters:
-    period: seconds, minutes, hours, days, months, ...
-    period_value: integer of how much you want to go back in time from the current_timestamp
+    date_part: seconds, minutes, hours, days, months, ...
+    time_travel_interval: integer of how much you want to go back in time from the current_timestamp
     threshold_value: integer for how much % the threshold may be from the time_travelled value
 */
 with cte_time_travel as (
 select count(*) as cnt_time_travel, 'time_travel' as source
 from {{ model }}
-at(timestamp => dateadd({{ period }}, -{{ period_value }}, current_timestamp()))
+at(timestamp => dateadd({{ date_part }}, -{{ time_travel_interval }}, current_timestamp()))
 ), cte_current_data as (
 select count(*) as cnt_current, 'current' as source
 from {{ model }}

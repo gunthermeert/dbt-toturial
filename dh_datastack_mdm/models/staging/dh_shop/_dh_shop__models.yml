@@ -4,14 +4,20 @@ models:
   - name: stg_dh_shop__customers
     tests:
       - time_travel_record_count_threshold:
-          period: 'minutes'
-          period_value: 5
+          date_part: 'minutes'
+          time_travel_interval: 5
           threshold_value: 1
       - time_travel_compare_values:
           date_part: 'minutes'
           time_travel_interval: 5
           unique_key: 'customer_id'
           compare_columns: ['FIRST_NAME', 'LAST_NAME']
+      - time_travel_with_condition:
+          date_part: 'minutes'
+          time_travel_interval: 5
+          unique_key: 'customer_id'
+          compare_columns: [ 'FIRST_NAME', 'LAST_NAME' ]
+          condition: 'EMAIL = ''Gunther'''
 
     description: dh_shop customers
     docs:
