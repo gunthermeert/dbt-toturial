@@ -41,7 +41,7 @@ select count(*) as cnt
 )
 select cnt
 from cte_final
-where cnt <> 0;
+where cnt <> 0
 
 {% endtest %}
 
