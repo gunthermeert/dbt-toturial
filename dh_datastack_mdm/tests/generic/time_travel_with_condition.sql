@@ -11,6 +11,9 @@ parameters:
     condition: string, extra where statements starting with and because of comparing columns first
 */
 
+{{ config(
+  enabled=true
+) }}
 
 with cte_time_travel as (
 select *, 'time_travel' as source
