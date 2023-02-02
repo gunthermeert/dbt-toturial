@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental'
-        unique_key='id'
+        unique_key='customer_id'
     )
 }}
 with source as (
