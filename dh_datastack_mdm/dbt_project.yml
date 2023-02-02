@@ -5,6 +5,7 @@
 name: 'dh_datastack_mdm'
 version: '1.0.0'
 config-version: 2
+require-dbt-version: '1.4.1'
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'dh_datastack_mdm'
