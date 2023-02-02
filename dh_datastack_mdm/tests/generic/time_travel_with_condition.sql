@@ -1,6 +1,6 @@
 {% test time_travel_with_condition(model, date_part, time_travel_interval, unique_key, compare_columns, condition) %}
 {{ config(
-  enabled=env_var('DBT_ENABLE_TESTS', true)
+  enabled=true
 ) }}
 
 -- time travel comparison that checks if all values in column x are the same as before the load
