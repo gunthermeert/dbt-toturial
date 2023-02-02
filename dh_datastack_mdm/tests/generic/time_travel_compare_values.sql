@@ -1,4 +1,4 @@
-{% test time_travel_compare_values(model, date_part, interval, unique_key, compare_columns) %}
+{% test time_travel_compare_values(model, date_part, time_travel_interval, unique_key, compare_columns) %}
 -- time travel comparison that checks if all values in column x are the same as before the load
 -- test must also include checking for deleted records
 -- e.g. test will fail if within timetravel record id=1 column_x = x and after load, record id=1 column_x = y -> column_x was updated
@@ -12,7 +12,7 @@ parameters:
 with cte_time_travel as (
 select *, 'time_travel' as source
 from {{ model }}
-at(timestamp => dateadd({{ date_part }}, -{{ date_interval }}, current_timestamp()))
+at(timestamp => dateadd({{ date_part }}, -{{ time_travel_interval }}, current_timestamp()))
 ), cte_current_data as (
 select *, 'current' as source
 from {{ model }}
@@ -28,8 +28,8 @@ select ctt.customer_id
     left join cte_current_data ccd
     on ctt.{{ unique_key }} = ccd.{{ unique_key }}
     {% for column in compare_columns -%}
-    {%- if loop.first -%} where ctt.'{{ column }}' <> ccd.'{{ column }}'
-    {%- else -%} or ctt.'{{ column }}' <> ccd.'{{ column }}'
+    {%- if loop.first -%} where ctt."{{ column }}" <> ccd."{{ column }}"
+    {%- else -%} or ctt."{{ column }}" <> ccd."{{ column }}"
     {%- endif %}
     {%- endfor %}
 ), cte_final as (
