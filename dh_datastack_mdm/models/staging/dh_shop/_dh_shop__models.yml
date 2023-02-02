@@ -7,6 +7,11 @@ models:
           period: 'minutes'
           period_value: 5
           threshold_value: 1
+      - time_travel_compare_values:
+          date_part: 'minutes'
+          interval: 5
+          unique_key: 'customer_id'
+          compare_columns: ['FIRST_NAME', 'LAST_NAME']
 
     description: dh_shop customers
     docs:
