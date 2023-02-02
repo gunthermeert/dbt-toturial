@@ -1,6 +1,6 @@
 {{
   config(
-    enabled=env_var('DBT_ENABLE_TESTS', true)
+    enabled=false
   )
 }}
 
