@@ -12,7 +12,7 @@ parameters:
 */
 
 {{ config(
-  enabled=true
+  enabled=false
 ) }}
 
 with cte_time_travel as (
