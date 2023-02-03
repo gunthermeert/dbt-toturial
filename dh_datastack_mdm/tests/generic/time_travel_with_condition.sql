@@ -12,7 +12,7 @@ parameters:
 */
 
 {{ config(
-  enabled=not env_var('DBT_TIME_TRAVEL_TESTS')
+  enabled=env_var('DBT_TIME_TRAVEL_TESTS' | bool)
 ) }}
 
 with cte_time_travel as (
