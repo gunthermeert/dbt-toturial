@@ -12,8 +12,8 @@ parameters:
 */
 
 {{ config(
-  enabled={% if env_var('DBT_TIME_TRAVEL_TESTS') == "True" %} 'GUNTHER'
-          {% else %} 'neeeneee'
+  enabled={% if env_var('DBT_TIME_TRAVEL_TESTS') == "True" %} true
+          {% else %} false
           {% endif %}
 ) }}
 
