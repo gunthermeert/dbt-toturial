@@ -11,10 +11,11 @@ parameters:
     condition: string, extra where statements starting with and because of comparing columns first
 */
 
+{% set time_travel_tests = env_var('DBT_TIME_TRAVEL_TESTS') == "True" %}
+
+
 {{ config(
-  enabled={% if env_var('DBT_TIME_TRAVEL_TESTS') == "True" %} true
-          {% else %} false
-          {% endif %}
+  enabled=time_travel_tests
 ) }}
 
 with cte_time_travel as (
