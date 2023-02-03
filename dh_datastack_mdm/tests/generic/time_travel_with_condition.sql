@@ -12,7 +12,9 @@ parameters:
 */
 
 {{ config(
-  enabled=not env_var('DBT_TIME_TRAVEL_TESTS')
+  enabled={% if env_var('DBT_TIME_TRAVEL_TESTS') == "True" %} 'GUNTHER'
+          {% else %} 'neeeneee'
+          {% endif %}
 ) }}
 
 with cte_time_travel as (
