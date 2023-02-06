@@ -1,9 +1,9 @@
 dh_datastack:
   outputs:
     dev:
-      account: zgjsxfx-sf91689
+      account: x
       database: DH_DATASTACK_ANALYTICS
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: PUBLIC
       threads: 1
@@ -11,9 +11,9 @@ dh_datastack:
       user: gunther
       warehouse: WH_DH_DATASTACK
     prod:
-      account: zgjsxfx-sf91689
+      account: x
       database: DH_DATASTACK_ANALYTICS
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: PROD
       threads: 1
@@ -24,9 +24,9 @@ dh_datastack:
 dh_datastack_marketing:
   outputs:
     dev:
-      account: zgjsxfx-sf91689
+      account: x
       database: DH_DATASTACK_MARKETING
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: MARKETING
       threads: 1
@@ -37,9 +37,9 @@ dh_datastack_marketing:
 dh_datastack_mdm:
   outputs:
     dev:
-      account: zgjsxfx-sf91689
+      account: x
       database: DH_DATASTACK_MDM
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: MDM
       threads: 1
@@ -52,9 +52,9 @@ dh_datastack_finance:
     partial_parse: true
   outputs:
     dev:
-      account: zgjsxfx-sf91689
+      account: x
       database: DH_DATASTACK_FINANCE
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: SALES
       threads: 1
@@ -65,9 +65,9 @@ dh_datastack_finance:
 jaffle_shop:
   outputs:
     dev:
-      account: zgjsxfx-sf91689
+      account: x
       database: ANALYTICS
-      password: 5$AMSDMtx3ogspf@
+      password: x
       role: accountadmin
       schema: PUBLIC
       threads: 1
