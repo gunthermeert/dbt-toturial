@@ -1,16 +1,16 @@
 version: 2
 
 models:
-  - name: int_dh_pharma__patients
+  - name: dim_patients
 
-    description: dh_pharma patients
+    description: dh_pharma dim patients
     docs:
       show: true
 
     columns:
       - name: patient_id
         description: pk of patient
-
+        
       - name: patient_sk
         tests:
           - unique
