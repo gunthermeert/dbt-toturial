@@ -1,4 +1,4 @@
-{% snapshot patient %}
+{% snapshot stg_patient %}
 
 {{
     config(
