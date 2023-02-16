@@ -1,9 +1,9 @@
-{% snapshot int_patients %}
+{% snapshot snap_patients %}
 
 {{
     config(
       target_database='DH_PHARMA',
-      target_schema='DH_PHARMA_INT',
+      target_schema='DH_PHARMA_SNAP',
       unique_key='Patient_ID',
 
       strategy='check',
