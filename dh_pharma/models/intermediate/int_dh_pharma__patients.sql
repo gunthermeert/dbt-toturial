@@ -1,9 +1,9 @@
-{% snapshot stg_patient %}
+{% snapshot int_patients %}
 
 {{
     config(
       target_database='DH_PHARMA',
-      target_schema='DH_PHARMA_STG',
+      target_schema='DH_PHARMA_INT',
       unique_key='Patient_ID',
 
       strategy='check',
@@ -12,6 +12,6 @@
     )
 }}
 
-select * from {{ source('dh_pharma', 'patient') }}
+select * from {{ref('stg_dh_pharma__patients')}}
 
 {% endsnapshot %}
