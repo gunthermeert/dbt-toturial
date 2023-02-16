@@ -1,0 +1,6 @@
+version: 2
+
+seeds:
+  - name: patient
+    config:
+      quote_columns: false
