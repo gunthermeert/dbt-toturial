@@ -4,7 +4,7 @@
     config(
       target_database='DH_PHARMA',
       target_schema='DH_PHARMA_STG',
-      unique_key='id',
+      unique_key='Patient_ID',
 
       strategy='check',
       check_cols='all',
