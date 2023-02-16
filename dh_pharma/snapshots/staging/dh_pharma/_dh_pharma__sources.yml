@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dh_pharma
+    database: DH_PHARMA
+    schema: DH_PHARMA_RAW
+
+    tables:
+      - name: patient
