@@ -161,3 +161,62 @@ Happy modeling!
 
 [0m13:08:41.136826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faff31e3e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faff31e3d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faff31e10c0>]}
 [0m13:08:41.137240 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-16 12:10:13.166224 | 271dc407-89dd-44e7-a177-516af79aaab6 ==============================
+[0m12:10:13.166245 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:10:13.171589 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dh_pharma', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:10:13.171850 [debug] [MainThread]: Tracking: tracking
+[0m12:10:13.173258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd75abec880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd75abec9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd75abecbb0>]}
+[0m12:10:13.178259 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-16 12:14:54.118834 | ba08aec9-4253-4682-8961-963119fbaebc ==============================
+[0m12:14:54.118846 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:14:54.119735 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dh_pharma', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:14:54.120104 [debug] [MainThread]: Tracking: tracking
+[0m12:14:54.121675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87d49c8b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87d49c9270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87d49c8af0>]}
+[0m12:14:54.123750 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-16 12:20:05.174733 | b3613514-9951-4dba-8580-4dff1f6cd075 ==============================
+[0m12:20:05.174747 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:20:05.176058 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:20:05.176173 [debug] [MainThread]: Tracking: tracking
+[0m12:20:05.177626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafa09ad600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafa09aca00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fafa09ad540>]}
+[0m12:20:05.179512 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-16 12:22:49.114343 | ac73ba72-bc73-45be-887e-60146fa11b65 ==============================
+[0m12:22:49.114358 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:22:49.116377 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:22:49.116508 [debug] [MainThread]: Tracking: tracking
+[0m12:22:49.117909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0dec1e0b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0dec1e1270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0dec1e0af0>]}
+[0m12:22:49.119318 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-02-16 12:23:16.406765 | ba799b43-b110-472d-90fc-12f55f5cdf3c ==============================
+[0m12:23:16.406778 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:23:16.408167 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/gunther/dh_datastack_dbt/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:23:16.408302 [debug] [MainThread]: Tracking: tracking
+[0m12:23:16.409971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49bcd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49bcf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49bcb20>]}
+[0m12:23:26.583860 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/dist-packages/dbt/include/starter_project
+[0m12:27:51.447348 [info ] [MainThread]: Profile dh_pharma written to /home/gunther/dh_datastack_dbt/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:27:51.449619 [info ] [MainThread]: 
+Your new dbt project "dh_pharma" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:27:51.452594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49bef80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49bcb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f01b49beef0>]}
+[0m12:27:51.452845 [debug] [MainThread]: Flushing usage events

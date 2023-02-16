@@ -1,50 +1,24 @@
 dh_datastack:
   outputs:
     dev:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
       database: DH_DATASTACK_ANALYTICS
-      password: "{{ env_var('DBT_PASSWORD') }}"
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
       role: accountadmin
       schema: PUBLIC
       threads: 1
       type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
+      user: '{{ env_var(''DBT_USER'') }}'
       warehouse: WH_DH_DATASTACK
     prod:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
       database: DH_DATASTACK_ANALYTICS
-      password: "{{ env_var('DBT_PASSWORD') }}"
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
       role: accountadmin
       schema: PROD
       threads: 1
       type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
-      warehouse: WH_DH_DATASTACK
-  target: dev
-dh_datastack_marketing:
-  outputs:
-    dev:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
-      database: DH_DATASTACK_MARKETING
-      password: "{{ env_var('DBT_PASSWORD') }}"
-      role: accountadmin
-      schema: MARKETING
-      threads: 1
-      type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
-      warehouse: WH_DH_DATASTACK
-  target: dev
-dh_datastack_mdm:
-  outputs:
-    dev:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
-      database: DH_DATASTACK_MDM
-      password: "{{ env_var('DBT_PASSWORD') }}"
-      role: accountadmin
-      schema: MDM
-      threads: 1
-      type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
+      user: '{{ env_var(''DBT_USER'') }}'
       warehouse: WH_DH_DATASTACK
   target: dev
 dh_datastack_finance:
@@ -52,26 +26,65 @@ dh_datastack_finance:
     partial_parse: true
   outputs:
     dev:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
       database: DH_DATASTACK_FINANCE
-      password: "{{ env_var('DBT_PASSWORD') }}"
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
       role: accountadmin
       schema: SALES
       threads: 1
       type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
+      user: '{{ env_var(''DBT_USER'') }}'
       warehouse: WH_DH_DATASTACK
+  target: dev
+dh_datastack_marketing:
+  outputs:
+    dev:
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
+      database: DH_DATASTACK_MARKETING
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
+      role: accountadmin
+      schema: MARKETING
+      threads: 1
+      type: snowflake
+      user: '{{ env_var(''DBT_USER'') }}'
+      warehouse: WH_DH_DATASTACK
+  target: dev
+dh_datastack_mdm:
+  outputs:
+    dev:
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
+      database: DH_DATASTACK_MDM
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
+      role: accountadmin
+      schema: MDM
+      threads: 1
+      type: snowflake
+      user: '{{ env_var(''DBT_USER'') }}'
+      warehouse: WH_DH_DATASTACK
+  target: dev
+dh_pharma:
+  outputs:
+    dev:
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
+      database: DH_PHARMA_RAW
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
+      role: accountadmin
+      schema: DH_PHARMA_RAW
+      threads: 1
+      type: snowflake
+      user: '{{ env_var(''DBT_USER'') }}'
+      warehouse: TF_DEMO
   target: dev
 jaffle_shop:
   outputs:
     dev:
-      account: "{{ env_var('DBT_SF_ACCOUNT') }}"
+      account: '{{ env_var(''DBT_SF_ACCOUNT'') }}'
       database: ANALYTICS
-      password: "{{ env_var('DBT_PASSWORD') }}"
+      password: '{{ env_var(''DBT_PASSWORD'') }}'
       role: accountadmin
       schema: PUBLIC
       threads: 1
       type: snowflake
-      user: "{{ env_var('DBT_USER') }}"
+      user: '{{ env_var(''DBT_USER'') }}'
       warehouse: TRANSFORMING
   target: dev
