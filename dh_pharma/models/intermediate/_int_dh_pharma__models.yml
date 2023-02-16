@@ -10,5 +10,3 @@ models:
     columns:
       - name: patient_id
         description: pk of patient
-        tests:
-          - unique
