@@ -39,6 +39,9 @@ models:
     intermediate:
       +schema: int
 
+seeds:
+  +schema: raw
+
 snapshots:
   dh_pharma:
     +schema: snap
