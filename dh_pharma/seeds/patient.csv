@@ -1,0 +1,16 @@
+Patient_ID,Age,Street_Name,House_Number,City,District,State,Country
+1,34,Main Street,123,New York,Manhattan,New York,USA
+2,41,Market Road,456,San Francisco,Marina,California,USA
+3,28,Queen's Road,789,Toronto,Ontario,Ontario,Canada
+4,52,Los Angeles Street,1,Los Angeles,Downtown,California,USA
+5,19,Brigade Road,234,Vancouver,British Columbia,British Columbia,Canada
+6,38,Oxford Street,567,Edmonton,Alberta,Alberta,Canada
+7,46,Michigan Avenue,890,Chicago,Illinois,Illinois,USA
+8,57,Paseo de la Reforma,234,Mexico City,Cuauhtémoc,Mexico City,Mexico
+9,25,Montreal Road,567,Ottawa,Ontario,Ontario,Canada
+10,33,Queen Street,123,Toronto,Ontario,Ontario,Canada
+11,48,Bay Street,456,Vancouver,British Columbia,British Columbia,Canada
+12,29,Broadway,789,New York,Manhattan,New York,USA
+13,55,King Street,1,Toronto,Ontario,Ontario,Canada
+14,22,Pennsylvania Avenue,234,Washington D.C.,Washington D.C.,District of Columbia,USA
+15,39,Beale Street,567,Memphis,Tennessee,Tennessee,USA
