@@ -34,3 +34,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dh_pharma:
     +materialized: table
+    staging:
+      +schema: stg
+    intermediate:
+      +schema: int
+
+snapshots:
+  dh_pharma:
+    +schema: snap
+
+

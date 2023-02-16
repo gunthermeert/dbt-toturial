@@ -69,7 +69,7 @@ dh_pharma:
       database: DH_PHARMA
       password: '{{ env_var(''DBT_PASSWORD'') }}'
       role: accountadmin
-      schema: DH_PHARMA_RAW
+      schema: DH_PHARMA
       threads: 1
       type: snowflake
       user: '{{ env_var(''DBT_USER'') }}'
