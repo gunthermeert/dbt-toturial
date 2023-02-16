@@ -23,7 +23,7 @@ from {{ ref('snap_patients') }}
 {% if is_incremental() %}
 
   -- this filter will only be applied on an incremental run
-  where dbt_updated_at > (select max(dbt_updated_at) from {{ this }})
+  where dbt_updated_at > (select max(update_ts) from {{ this }})
 
 {% endif %}
 ) select * from patients
