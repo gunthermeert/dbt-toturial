@@ -5,7 +5,7 @@
 }}
 
 with patients as (
-select dbt_scd_id as patient_sk
+select patient_sk
 , patient_id
 , age
 , street_name
