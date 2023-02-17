@@ -44,6 +44,6 @@ seeds:
 
 snapshots:
   dh_pharma:
-    +schema: snap
+    +schema: int
 
 

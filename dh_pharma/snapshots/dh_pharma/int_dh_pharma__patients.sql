@@ -1,4 +1,4 @@
-{% snapshot snap_dh_pharma__patients %}
+{% snapshot int_dh_pharma__patients %}
 
 {{
     config(
