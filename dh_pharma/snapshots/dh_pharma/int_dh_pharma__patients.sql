@@ -3,7 +3,7 @@
 {{
     config(
       target_database='DH_PHARMA',
-      target_schema='DH_PHARMA_SNAP',
+      target_schema='DH_PHARMA_INT',
       unique_key='Patient_ID',
 
       strategy='check',
