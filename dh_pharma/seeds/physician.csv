@@ -1,4 +1,4 @@
-Physician_ID,Specialization,Street Name,House Number,City,District,State,Country
+Physician_ID,Specialization,Street_Name,House_Number,City,District,State,Country
 1,Cardiology,Main Street,123,New York,Manhattan,New York,USA
 2,Neurology,2nd Avenue,456,Los Angeles,Hollywood,California,USA
 3,Endocrinology,3rd Street,789,San Francisco,Marina,California,USA

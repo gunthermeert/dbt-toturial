@@ -1,8 +1,8 @@
 with physicians as (
 select physician_id
 , specialization
-, "Street Name" as street_name
-, "House Number" as house_number
+, street_name
+, house_number
 , City
 , District
 , State
