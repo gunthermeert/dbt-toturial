@@ -7,3 +7,6 @@ sources:
 
     tables:
       - name: patient
+      - name: physician
+      - name: lab_test
+      - name: lab_test_measurement_type

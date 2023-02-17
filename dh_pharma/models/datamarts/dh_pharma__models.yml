@@ -2,15 +2,39 @@ version: 2
 
 models:
   - name: dim_patients
-
     description: dh_pharma dim patients
     docs:
       show: true
-
     columns:
       - name: patient_id
         description: pk of patient
-        
       - name: patient_sk
+        tests:
+          - unique
+          -
+  - name: dim_physicians
+    description: dh_pharma dim physicians
+    docs:
+      show: true
+    columns:
+      - name: physician_sk
+        tests:
+          - unique
+
+  - name: dim_lab_tests
+    description: dh_pharma dim lab tests
+    docs:
+      show: true
+    columns:
+      - name: lab_test_sk
+        tests:
+          - unique
+
+  - name: dim_lab_test_measurement_types
+    description: dh_pharma dim lab test measurement types
+    docs:
+      show: true
+    columns:
+      - name: lab_test_measurement_type_sk
         tests:
           - unique

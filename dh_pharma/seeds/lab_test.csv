@@ -1,0 +1,26 @@
+Lab_Test_ID,Name,Category
+1,Blood Glucose,Fasting Blood Sugar
+2,HbA1c,A1c
+3,Lipid Panel,Lipid Profile
+4,Complete Blood Count (CBC),Hematology
+5,White Blood Cell Count (WBC),Hematology
+6,Platelet Count,Hematology
+7,Prothrombin Time (PT),Coagulation
+8,Activated Partial Thromboplastin Time (aPTT),Coagulation
+9,Thrombin Time (TT),Coagulation
+10,Blood Culture,Microbiology
+11,Urine Culture,Microbiology
+12,Throat Culture,Microbiology
+13,Fecal Occult Blood Test (FOBT),Gastroenterology
+14,Colonoscopy,Biopsy
+15,EGD,Biopsy
+16,CT Scan,Radiology
+17,MRI Scan,Radiology
+18,Ultrasound,Radiology
+19,Echocardiogram,Cardiology
+20,Electrocardiogram (ECG),Cardiology
+21,Pulmonary Function Test,Pulmonology
+22,Spirometry,Pulmonology
+23,Sleep Study,Pulmonology
+24,Allergy Testing,Allergy and Immunology
+25,Immunoglobulin E (IgE) Testing,Allergy and Immunology

@@ -1,0 +1,11 @@
+Lab_Test_Measurement_Type_ID, Unit_Of_Measure, Reference_Minimum_Value, Reference_Maximum_Value, Description
+1, mg/dL, 70, 100, Fasting Blood Glucose
+2, mg/dL, 200, 300, Postprandial Blood Glucose
+3, %, 4.5, 6.5, Hemoglobin A1c
+4, mg/dL, 200, 240, Total Cholesterol
+5, mg/dL, 40, 60, HDL Cholesterol
+6, mg/dL, 100, 150, LDL Cholesterol
+7, mmol/L, 2.6, 4.4, Calcium
+8, ng/mL, 10, 50, Vitamin D
+9, mU/L, 0.4, 4.0, Thyroid Stimulating Hormone (TSH)
+10, ng/mL, 0.5, 4.0, Thyroxine (T4)

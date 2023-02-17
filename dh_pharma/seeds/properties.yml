@@ -4,3 +4,15 @@ seeds:
   - name: patient
     config:
       quote_columns: false
+
+  - name: physician
+    config:
+      quote_columns: false
+
+  - name: lab_test
+    config:
+      quote_columns: false
+
+  - name: lab_test_measurement_type
+    config:
+      quote_columns: false
