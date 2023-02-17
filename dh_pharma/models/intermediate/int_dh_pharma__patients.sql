@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental',
-        unique_key='dbt_scd_id'
+        unique_key='patient_sk'
     )
 }}
 
