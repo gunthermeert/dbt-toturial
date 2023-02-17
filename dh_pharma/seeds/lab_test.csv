@@ -24,3 +24,32 @@ Lab_Test_ID,Name,Category
 23,Sleep Study,Pulmonology
 24,Allergy Testing,Allergy and Immunology
 25,Immunoglobulin E (IgE) Testing,Allergy and Immunology
+26,Blood Urea Nitrogen (BUN),Renal Function
+27,Creatinine,Renal Function
+28,Uric Acid,Renal Function
+29,Thyroid Stimulating Hormone (TSH),Endocrinology
+30,Free Thyroxine (FT4),Endocrinology
+31,Total Thyroxine (T4),Endocrinology
+32,Total Triiodothyronine (T3),Endocrinology
+33,Follicle Stimulating Hormone (FSH),Reproductive Endocrinology
+34,Luteinizing Hormone (LH),Reproductive Endocrinology
+35,Progesterone,Reproductive Endocrinology
+36,Testosterone,Reproductive Endocrinology
+37,Pregnancy Test,Obstetrics and Gynecology
+38,Cervical Cancer Screening,Obstetrics and Gynecology
+39,Human Papillomavirus (HPV) Test,Obstetrics and Gynecology
+40,Herpes Simplex Virus (HSV) Test,Infectious Disease
+41,Hepatitis B Surface Antigen Test,Infectious Disease
+42,Hepatitis C Antibody Test,Infectious Disease
+43,HIV Antibody Test,Infectious Disease
+44,Tuberculosis (TB) Skin Test,Infectious Disease
+45,Lead Poisoning Test,Toxicology
+46,Drug Screening,Toxicology
+47,Alcohol Testing,Toxicology
+48,Heavy Metal Testing,Toxicology
+49,Food Allergy Testing,Allergy and Immunology
+50,Drug Allergy Testing,Allergy and Immunology
+51,Latex Allergy Testing,Allergy and Immunology
+52,Patch Testing,Dermatology
+53,Skin Biopsy,Dermatology
+54,Skin Prick Testing,Dermatology
