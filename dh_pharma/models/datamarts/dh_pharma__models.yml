@@ -11,7 +11,7 @@ models:
       - name: patient_sk
         tests:
           - unique
-          -
+
   - name: dim_physicians
     description: dh_pharma dim physicians
     docs:
