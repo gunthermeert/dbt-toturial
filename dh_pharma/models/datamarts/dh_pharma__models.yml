@@ -38,3 +38,13 @@ models:
       - name: lab_test_measurement_type_sk
         tests:
           - unique
+
+
+  - name: fact_lab_test_results
+    description: fact lab test results
+    docs:
+      show: true
+    columns:
+      - name: lab_test_result_id
+        tests:
+          - unique
