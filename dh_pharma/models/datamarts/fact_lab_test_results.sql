@@ -6,7 +6,7 @@ select * from {{ ref('dim_patients') }}
 select * from {{ ref('dim_lab_tests') }}
 ), cte_dim_lab_test_measurement_types as (
 select * from {{ ref('dim_lab_test_measurement_types') }}
-), cte_int_lab_results as (
+), cte_int_lab_test_results as (
 select * from {{ ref('int_dh_pharma__lab_test_results') }}
 ), cte_fact_lab_test_results as (
 select ciltr.lab_test_result_id
