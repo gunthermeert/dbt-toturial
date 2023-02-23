@@ -16,3 +16,7 @@ seeds:
   - name: lab_test_measurement_type
     config:
       quote_columns: false
+
+  - name: lab_test_results
+    config:
+      quote_columns: false

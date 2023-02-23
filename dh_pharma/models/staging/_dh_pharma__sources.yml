@@ -10,3 +10,4 @@ sources:
       - name: physician
       - name: lab_test
       - name: lab_test_measurement_type
+      - name: lab_test_results

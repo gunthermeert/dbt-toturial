@@ -40,3 +40,13 @@ models:
         description: pk of lab test measurement type
         tests:
           - unique
+
+  - name: stg_dh_pharma__lab_test_results
+    description: dh_pharma lab test results
+    docs:
+      show: true
+    columns:
+      - name: lab_test_result_id
+        description: pk lab_test_result_id
+        tests:
+          - unique
