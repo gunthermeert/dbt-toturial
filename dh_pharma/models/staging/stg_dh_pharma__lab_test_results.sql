@@ -8,6 +8,6 @@ lab_test_id,
 lab_test_measurement_type_id,
 unit_of_measure,
 observed_test_result_value,
-current_timestamp() as insert_dt
+sysdate() as insert_dt
 from {{ ref('lab_test_results') }}
 ) select * from lab_test_results
