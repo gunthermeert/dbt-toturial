@@ -24,16 +24,20 @@ inner join dh_pharma.dim_date test_date
 on test_date.date = ciltr.test_date
 left join cte_dim_patients cdp
 on ciltr.patient_id = cdp.patient_id
-and cdp.current_flg = 1
+and ciltr.insert_dt >= cdp.valid_from
+and ciltr.insert_dt < cdp.valid_to
 left join cte_dim_physicians dp
 on ciltr.physician_id = dp.physician_id
-and dp.current_flg = 1
+and ciltr.insert_dt >= dp.valid_from
+and ciltr.insert_dt < dp.valid_to
 left join cte_dim_lab_tests lt
 on ciltr.lab_test_id = lt.lab_test_id
-and lt.current_flg = 1
+and ciltr.insert_dt >= lt.valid_from
+and ciltr.insert_dt < lt.valid_to
 left join cte_dim_lab_test_measurement_types ltmt
 on ciltr.lab_test_measurement_type_id = ltmt.lab_test_measurement_type_id
-and ltmt.current_flg = 1
+and ciltr.insert_dt >= ltmt.valid_from
+and ciltr.insert_dt < ltmt.valid_to
 ) select * from cte_fact_lab_test_results
 
 
