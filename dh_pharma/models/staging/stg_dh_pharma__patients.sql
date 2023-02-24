@@ -7,5 +7,5 @@ select patient_id
 , district
 , state
 , country
-from {{ source('dh_pharma', 'patient') }}
+from {{ ref ('patient') }}
 ) select * from patients
