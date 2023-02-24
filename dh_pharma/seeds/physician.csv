@@ -14,3 +14,18 @@ Physician_ID,Specialization,Street_Name,House_Number,City,District,State,Country
 13,Psychiatry,13th Street,1919,Washington DC,Georgetown,District of Columbia,USA
 14,Pulmonology,14th Avenue,2020,Mexico City,Condesa,Mexico City,Mexico
 15,Rheumatology,15th Street,2121,Ottawa,Byward Market,Ontario,Canada
+16,Cardiology,Alabama Street,123,Birmingham,Avondale,Alabama,USA
+17,Neurology,Jefferson Street,456,Huntsville,Downtown,Alabama,USA
+18,Endocrinology,Washington Avenue,789,Tuscaloosa,Central City,Alabama,USA
+19,Pediatrics,Memorial Parkway,1010,Mobile,Hilltop,Alabama,USA
+20,Dermatology,University Boulevard,1111,Auburn,Auburn,Alabama,USA
+21,Orthopedics,Montgomery Highway,1212,Dothan,Highland Park,Alabama,USA
+22,Oncology,Highway 280,1313,Birmingham,Cahaba Heights,Alabama,USA
+23,Gastroenterology,South College Street,1414,Montgomery,Old Cloverdale,Alabama,USA
+24,Family Medicine,Eastern Boulevard,1515,Montgomery,East Montgomery,Alabama,USA
+25,Internal Medicine,Old Shell Road,1616,Mobile,West Mobile,Alabama,USA
+26,Allergy and Immunology,Hospital Drive,1717,Huntsville,Medical District,Alabama,USA
+27,Obstetrics and Gynecology,Cottage Hill Road,1818,Mobile,Cottage Hill,Alabama,USA
+28,Psychiatry,Clinton Avenue,1919,Huntsville,Old Town,Alabama,USA
+29,Pulmonology,Hillcrest Road,2020,Mobile,Spring Hill,Alabama,USA
+30,Rheumatology,Governor's Drive,2121,Huntsville,Blossomwood,Alabama,USA

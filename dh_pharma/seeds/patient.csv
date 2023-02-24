@@ -14,3 +14,39 @@ Patient_ID,Age,Street_Name,House_Number,City,District,State,Country
 13,55,King Street,1,Toronto,Ontario,Ontario,Canada
 14,22,Pennsylvania Avenue,234,Washington D.C.,Washington D.C.,District of Columbia,USA
 15,39,Beale Street,567,Memphis,Tennessee,Tennessee,USA
+16,47,Grandview Drive,123,Birmingham,Jefferson,Alabama,USA
+17,31,Highland Avenue,456,Montgomery,Montgomery,Alabama,USA
+18,53,Old Shell Road,789,Mobile,Mobile,Alabama,USA
+19,26,Woodward Avenue,1,Tuscaloosa,Tuscaloosa,Alabama,USA
+20,43,Chase Road,234,Huntsville,Madison,Alabama,USA
+21,35,Rainwood Drive,567,Dothan,Houston,Alabama,USA
+22,50,Forest Ridge Drive,890,Decatur,Morgan,Alabama,USA
+23,29,Princeton Road,123,Florence,Lauderdale,Alabama,USA
+24,48,Westside Drive,456,Anniston,Calhoun,Alabama,USA
+25,32,Regency Lane,789,Auburn,Lee,Alabama,USA
+26,54,Plantation Road,1,Gadsden,Etowah,Alabama,USA
+27,27,Whispering Pines Drive,234,Enterprise,Coffee,Alabama,USA
+28,44,Greenhill Road,567,Selma,Dallas,Alabama,USA
+29,36,Springfield Drive,890,Opelika,Lee,Alabama,USA
+30,51,Fairfield Drive,123,Phenix City,Russell,Alabama,USA
+31,30,Lanark Road,456,Montgomery,Montgomery,Alabama,USA
+32,49,Pearson Street,789,Birmingham,Jefferson,Alabama,USA
+33,33,Hillside Drive,1,Tuscaloosa,Tuscaloosa,Alabama,USA
+34,46,Magnolia Street,234,Huntsville,Madison,Alabama,USA
+35,28,Forest Lane,567,Decatur,Morgan,Alabama,USA
+36,52,Greenwood Drive,890,Anniston,Calhoun,Alabama,USA
+37,25,Aspen Road,123,Florence,Lauderdale,Alabama,USA
+38,47,Crestview Drive,456,Gadsden,Etowah,Alabama,USA
+39,31,Elm Street,789,Enterprise,Coffee,Alabama,USA
+40,53,Lakeshore Drive,1,Dothan,Houston,Alabama,USA
+41,26,Main Street,234,Selma,Dallas,Alabama,USA
+42,43,Laurel Lane,567,Opelika,Lee,Alabama,USA
+43,35,Cedar Lane,890,Phenix City,Russell,Alabama,USA
+44,50,Orchard Drive,123,Birmingham,Jefferson,Alabama,USA
+45,29,Juniper Drive,456,Montgomery,Montgomery,Alabama,USA
+46,48,Cherry Lane,789,Mobile,Mobile,Alabama,USA
+47,32,Poplar Street,1,Tuscaloosa,Tuscaloosa,Alabama,USA
+48,54,Meadow Lane,234,Huntsville,Madison,Alabama,USA
+49,27,Willow Street,567,Decatur,Morgan,Alabama,USA
+50,44,Cherokee Road,890,Anniston,Calhoun,Alabama,USA
+51,36,Woodland Drive,123,Florence,Lauderdale,Alabama,USA
