@@ -1,16 +1,16 @@
 Physician_ID,Specialization,Street_Name,House_Number,City,District,State,Country
 1,Cardiology,Main Street,123,New York,Manhattan,New York,USA
 2,Neurology,2nd Avenue,456,Los Angeles,Hollywood,California,USA
+3,Endocrinology,3rd Street,789,San Francisco,Marina,California,USA
 4,Pediatrics,4th Avenue,1010,Miami Beach,South Beach,Florida,USA
 5,Dermatology,5th Street,1111,Chicago,Gold Coast,Illinois,USA
 6,Orthopedics,6th Avenue,1212,Toronto,York,Ontario,Canada
 7,Oncology,7th Street,1313,Vancouver,Downtown,British Columbia,Canada
 8,Gastroenterology,8th Avenue,1414,Montreal,Plateau-Mont-Royal,Quebec,Canada
 9,Family Medicine,9th Street,1515,Mexico City,Polanco,Mexico City,Mexico
+10,Internal Medicine,10th Avenue,1616,Dallas,Uptown,Texas,USA
 11,Allergy and Immunology,11th Street,1717,Seattle,Capitol Hill,Washington,USA
-12,Obstetrics and Gynecology,12th Avenue,2525,Calgary,Beltline,Alberta,Canada
+12,Obstetrics and Gynecology,12th Avenue,1818,Calgary,Victoria Park,Alberta,Canada
 13,Psychiatry,13th Street,1919,Washington DC,Georgetown,District of Columbia,USA
+14,Pulmonology,14th Avenue,2020,Mexico City,Condesa,Mexico City,Mexico
 15,Rheumatology,15th Street,2121,Ottawa,Byward Market,Ontario,Canada
-16,Ophthalmology,16th Avenue,2222,Montreal,Outremont,Quebec,Canada
-17,Neurology,17th Street,2323,Seattle,Queen Anne,Washington,USA
-18,Cardiology,18th Avenue,2424,Mexico City,Polanco,Mexico City,Mexico
