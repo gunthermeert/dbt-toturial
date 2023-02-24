@@ -8,5 +8,5 @@ lab_test_id,
 lab_test_measurement_type_id,
 unit_of_measure,
 observed_test_result_value
-from {{ source('dh_pharma', 'lab_test_results') }}
+from {{ ref('lab_test_results') }}
 ) select * from lab_test_results
