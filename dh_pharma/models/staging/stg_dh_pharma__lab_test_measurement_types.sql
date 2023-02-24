@@ -4,6 +4,5 @@ select Lab_Test_Measurement_Type_ID
 , Reference_Minimum_Value
 , Reference_Maximum_Value
 , Description
-, current_timestamp() as insert_dt
 from {{ ref('lab_test_measurement_type') }}
 ) select * from lab_test_measurement_types
